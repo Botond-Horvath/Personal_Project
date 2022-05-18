@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Exoplanet.org</title>
+        <link rel="icon" href="icon.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            body {
+                background-color:white;
+                margin:0;
+                font-family:'Verdana', sans-serif;
+            }
+
+            .text {
+                margin:40px;
+            }
+
+            header {
+                background-image:url(title.jpg);
+                background-size:1450px 700px;
+            }
+
+            h1.title {
+                text-align:center;
+                color:blue;
+                font-family: 'Gill Sans';
+                font-style: italic;
+                padding-top: 50px;
+                padding-bottom:50px;
+                font-size:80px;
+                margin:0;
+            }
+
+            ul {
+                list-style-type: none;
+                background-color:black;
+			    margin:0;
+			    width:100%;
+			    padding:0;
+                overflow:hidden;
+			    box-shadow:2px 5px 10px black;
+            }
+
+            ul > li {
+                float:left;
+            }
+
+            ul > li a, .dropdown_button {
+                text-align:center;
+			    color:white;
+			    padding:10px;
+			    font-family:Gill Sans;
+			    font-size:20px;
+			    text-decoration:none;
+                border:none;
+                display:inline-block;
+            }
+
+            .current {
+                background-color:rgb(3, 3, 199);
+            }
+
+            ul > li a:hover, .dropdown_content a:hover {
+                background-color:white;
+                color:black;
+                cursor:pointer;
+                transition:0.2s ease-in;
+            }
+
+            ul > li.dropdown {
+                display:inline-block;
+            }
+
+            .dropdown_content {
+                display:none;
+                box-shadow:3px 3px 2px black;
+                background-color:black;
+                position:absolute;
+                z-index:1;
+            }
+
+            .dropdown_content > a {
+                text-decoration:none;
+                color:white;
+                display:block;
+                padding:10px;
+                font-family:Gill Sans;
+			    font-size:20px;
+                text-align:center;
+            }
+
+            .dropdown:hover .dropdown_content {
+                display: block;
+            }
+
+            h3.subtitle {
+                color:white;
+                background-color:rgb(3, 3, 199);
+                font-family:'Trebuchet MS';
+                font-weight:bold;
+                text-align:center;
+                margin:0;
+                padding:10px;
+            }
+
+            img.equasion {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                width:10%;
+                transition:0.4s
+            }
+
+            img.equasion:hover {
+                cursor:pointer;
+                width:20%;
+                border:2px 2px 1px grey;
+                box-shadow:2px 3px 2px black;
+            }
+
+            figure.figure {
+                margin:0;
+                width:100%;
+            }
+
+            figure > img {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                width:30%;
+                box-shadow:none;
+                transition:0.6s;
+            }
+
+            figure > img:hover {
+                box-shadow:2px 2px 2px grey;
+                cursor:pointer;
+            }
+
+            figure > figcaption {
+                padding:10px;
+                text-align:center;
+            }
+
+            p > a {
+                color:rgb(46, 91, 216);
+                font-weight:bold;
+                text-decoration:none;
+                transition:0.2s ease-in;
+            }
+
+            p > a:hover {
+                background-color:beige;
+                cursor:pointer;
+            }
+
+            .parameters {
+                display:block;
+                list-style-type:none;
+                background-image:url('stars.jpg');
+                padding:15px;
+                width:100%;
+                background-size:100% 190%;
+            }
+
+            .parameters > li {
+                text-align:center;
+                margin:20px;
+                padding:2px;
+            }
+
+            .parameters > li > a {
+                border-radius:30px;
+                text-decoration:none;
+                padding:10px;
+                background-color:white;
+                color:black;
+                transition:0.6s;
+            }
+
+            .parameters > li > a:hover {
+                cursor:pointer;
+                color:white;
+                background-color:black;
+            }
+
+            .table {
+                border:1px solid black;
+                width:50%;
+                height:200px;
+            }
+
+            .table > td {
+                border:1px solid black;
+                margin:10px;
+                padding:10px;
+            }
+
+            div.exo_link {
+                display:flex;
+                justify-content:space-around;
+                align-items:center;
+                background-image:url(stars.jpg);
+                width:100%;
+                height:20vh;
+                margin:0;
+                margin-bottom:35px;
+            }
+
+            div.exo_link:hover {
+                box-shadow:2px 2px 3px black;
+            }
+
+            .child > a {
+                text-decoration:none;
+                background-color:white;
+                color:black;
+                padding:15px 50px;
+                border-radius:40px;
+                text-align:center;
+                font-family:'Gill Sans';
+                font-style:italic;
+                transition:0.6s;
+            }
+
+            .child > a:hover {
+                background-color:black;
+                color:white;
+                cursor:pointer;
+            }
+
+            div#footer {
+                background-image:url(title.jpg);
+                background-size:1450px 700px;
+                color:white;
+                margin:0;
+                padding:0;
+                min-width:100%;
+                float:left;
+            }
+
+            div#footer > p {
+                text-align:center;
+                margin:30px;
+            }
+
+            .sticky {
+                position:fixed;
+                top:0;
+            }
+
+            @media only screen and (max-width: 700px) {
+                h1.title {
+                    font-size: 80px;
+                }
+                .table {
+                    width:100%;
+                }
+                .figure > img {
+                    width:100%;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+            <h1 class=title>Exoplanet Blog</h1>
+        </header>
+        <ul id="navId">
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="observations.html">Observational Data</a></li>
+            <li class="dropdown">
+                <a class="dropdown_button" href="#top">Parameter Calculations</a>
+                <div class="dropdown_content">
+                    <a class="current" href="stars.html">Host Star Parameters</a>
+                    <a href="parameters.html">Exoplanet Parameters</a>
+                </div>
+            </li>
+            <li><a href="data.html">Data Analysis</a></li>
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="bibliography.html">Bibliography</a></li>
+        </ul>
+        <h3 class=subtitle>
+            The World of Stars
+        </h3>
+        <div class="text">
+            <p>
+                Stars, unlike exoplanets, have been known and observed ever since humans
+                existed. When there is a clear night, anyone could just go outside and
+                observe these often awe inspiring testaments to our universe. Stars form
+                therefore the cradle of all that we know of astronomy today. So what are
+                stars, and what can we know about them?
+            </p>
+            <p>
+                Well, stars in short are large spheres of matter that are so massive that
+                they are able to produce their own heat, through nuclear reactions that
+                take place inside their cores, and radiate out from them in the form of
+                <b>electromagnetic radiation</b>, which could be visible, infrared in the
+                form of heat, UV, or many other forms of light. All stars are made up
+                mostly of Hydrogen, like most other objects in the universe, and this is
+                what stars fuse in the main portion of their lives in their core. However,
+                they also contain Helium, and then trace amounts of Oxygen, Nitrogen, and
+                other metals usually in ionized states. We know this from observing the
+                spectrum of these stars, explained in the
+                <a href="observations.html">observations</a> section.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="pegasus.jpg"/>
+            <figcaption>
+                51 Pegasi
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                The image above is an image of the star 51 Pegasi found in the
+                constellation Pegasus. It is barely visible by the human eye. In
+                constellations, the names of the stars are preceded by greek letters if
+                the star is part of the constellation. If a star is insignificant in that
+                it is found only in the territory of the constellation but not as a part
+                of it, it is usually given a number. Therefore, 51 Pegasi is barely visible
+                and does not form part of the Pegasus constellation, but is found in its
+                territory.
+            </p>
+            <p>
+                The name of this star might already be familiar. The reason is that the
+                first exoplanet ever discovered, 51 Pegasi b (exoplanets are given
+                lowercase letters after the star name, starting with b) was indeed
+                discovered as orbiting this star. So naturally, since it is necessary
+                to know parameters of the parent star before calculating the parameters
+                of the exoplanet orbiting it, we are going to demonstrate the
+                calculations on this star, so we will have them for the exoplanet
+                calculations too. The below sections run through the different
+                parameters of the stars, and how they are calculated.
+            </p>
+            <p>
+                Something that I found out when doing research on stars is that their field
+                has been studied for a long time and therefore very deeply. There is just
+                a lot of information that can be known of stars. Therefore, this section
+                will be divided into different subsections for the different parameters
+                that can be calculated or measured for stars. The parameters that will be
+                showcased, and that will show knowledge that is relevant to calculating
+                exoplanet parameters are listed below:
+            </p>
+        </div>
+        <ol class="parameters">
+            <li><a href="distance.html">Distances</a></li>
+            <li><a href="magnitudes.html">Brightness and Magnitudes</a></li>
+            <li><a href="luminosity.html">Luminosity</a></li>
+            <li><a href="temperature.html">Temperature</a></li>
+            <li><a href="HR.html">Connecting the first Pieces: The HR Diagram</a></li>
+            <li><a href="radius.html">Radius (Size)</a></li>
+            <li><a href="binary.html">Mass Workaround: Binary Stars!</a></li>
+        </ol>
+        <div class="text">
+            <p><b>Summary</b></p>
+            <p>
+                Through the last few sections we have come to understand on a much
+                deeper level the parents of exoplanets: stars, and how astronomers are
+                able to measure, calculate, and derive what they know about stars.
+                Knowing about stars is crucial to know about exoplanets, and in fact
+                any time that an exoplanet is discovered orbiting a star, whether through
+                the radial velocity, transit, or any other method, the astronomer first
+                needs to get familiar with the parent star before he/she can dive into
+                calculating any parameter for the exoplanet. Now, calculating exoplanet
+                parameters will be a walk in the park, since mostly the same laws will
+                be applied as were applied to stars.
+            </p>
+            <p>
+                Before continuing to calculate the parameters of 51 Pegasi b, the first
+                exoplanet discovered, let us summarize what we have measured and
+                calculated in this section for its parent, 51 Pegasi:
+            </p>
+            <table class="table">
+                <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Apparent Magnitude</td>
+                    <td>5.49</td>
+                </tr>
+                <tr>
+                    <td>Distance</td>
+                    <td>15.4 Parsecs (~50 ly)</td>
+                </tr>
+                <tr>
+                    <td>Absolute Magnitude</td>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <td>Luminosity</td>
+                    <td>1.36 Solar Luminosities</td>
+                </tr>
+                <tr>
+                    <td>B-V Colour Index</td>
+                    <td>0.67</td>
+                </tr>
+                <tr>
+                    <td>Temperature</td>
+                    <td>5700K</td>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td>G2IV</td>
+                </tr>
+                <tr>
+                    <td>Radius</td>
+                    <td>1.2 Solar Radii</td>
+                </tr>
+                <tr>
+                    <td>Mass</td>
+                    <td>1.1 Solar Masses</td>
+                </tr>
+            </table>
+        </div>
+        <div class="exo_link">
+            <div class="child">
+                <a href="parameters.html">Back to Exoplanets!</a>
+            </div>
+        </div>
+        <div id="footer">
+            <p>
+                Written by Botond Horvath
+            </p>
+        </div>
+        <script>
+            window.onscroll = function() {myFunction()};
+
+            var nav = document.getElementById("navId");
+            var sticky = nav.offsetTop;
+
+            function myFunction() {
+            if (window.pageYOffset > sticky) {
+                nav.classList.add("sticky");
+            } else {
+                nav.classList.remove("sticky");
+            }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Exoplanet.org</title>
+        <link rel="icon" href="icon.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            body {
+                background-color:white;
+                margin:0;
+                font-family:'Verdana', sans-serif;
+            }
+
+            .text {
+                margin:40px;
+                text-align:center;
+            }
+
+            h3.subtitle {
+                color:white;
+                background-color:rgb(3, 3, 199);
+                font-family:'Trebuchet MS';
+                font-weight:bold;
+                text-align:center;
+                margin:0;
+                padding:10px;
+                position:fixed;
+                top:0;
+                width:100%;
+            }
+
+            img.equasion {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                width:20%;
+                transition:0.4s
+            }
+
+            img.equasion:hover {
+                cursor:pointer;
+                width:30%;
+                border:2px 2px 1px grey;
+                box-shadow:2px 3px 2px black;
+            }
+
+            figure.figure {
+                margin:0;
+                width:100%;
+            }
+
+            figure > img {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                width:40%;
+                box-shadow:none;
+                transition:0.6s;
+            }
+
+            figure > img:hover {
+                box-shadow:2px 2px 2px grey;
+                cursor:pointer;
+            }
+
+            figure > figcaption {
+                padding:10px;
+                text-align:center;
+            }
+
+            p > a {
+                color:rgb(46, 91, 216);
+                font-weight:bold;
+                text-decoration:none;
+                transition:0.2s ease-in;
+            }
+
+            p > a:hover {
+                background-color:beige;
+                cursor:pointer;
+            }
+
+            div.back {
+                text-align:center;
+                margin:30px;
+            }
+
+            a.back {
+                padding:10px;
+                text-decoration:none;
+                background-color:cyan;
+                color:black;
+                width:100%;
+                transition:0.3s;
+            }
+
+            a.back:hover {
+                cursor:pointer;
+                background-color:black;
+                color:white;
+            }
+
+            .table {
+                width:100%;
+                display:flex;
+                justify-content:center;
+            }
+
+            table {
+                border:1px solid black;
+                width:100%;
+            }
+
+            td {
+                border:1px solid black;
+                text-align:center;
+                padding:5px;
+            }
+
+            div#footer {
+                background-image:url(title.jpg);
+                background-size:1450px 700px;
+                color:white;
+                margin:0;
+                padding:0;
+                min-width:100%;
+                float:left;
+            }
+
+            div#footer > p {
+                text-align:center;
+                margin:30px;
+            }
+
+            @media only screen and (max-width: 700px) {
+                img.equasion {
+                    width:50%;
+                }
+                img.equasion:hover {
+                    width:60%;
+                }
+                figure > img {
+                    width:100%;
+                }
+                table {
+                    width:100%;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <h3 class=subtitle>
+            Temperature
+        </h3>
+        <div class="text">
+            <p style="margin-top:60px;">
+                The second big piece of the puzzle towards stellar masses and sizes is
+                understanding the temperatures of the stars. Very early on by the 19th
+                century, scientists were experimenting with so-called
+                <b>black bodies</b>, which were like boxes all black so that only
+                radiation emitted by the heated object of interest in the boxes would
+                be taken into consideration. These scientists were beginning to discover
+                that the colour, or wavelength of colour emitted by these objects was
+                strongly related to the temperature of the heated objects. Stars
+                themselves can be thought of as black bodies, since in the vacuum of
+                space, it is basically almost only their own light that is being
+                emitted, with no light from other stars (except for binaries perhaps),
+                and therefore we can say that the colour of stars is closely related to
+                their temperature. In fact, Wilhelm Wien developed a relation where the
+                peak wavelength of light that is emitted by the object is related
+                mathematically to the temperature in kelvins according to a law known
+                as <b>Wien’s law</b>.
+            </p>
+            <p>
+                Kelvins are a temperature unit used mostly in astrophysics. The reason
+                for this is that 0 kelvins is precisely equal to absolute zero
+                (-273.15 celsius), or the lowest temperature possible in thermodynamic
+                terms. The peak wavelength on the other hand (wavelength is often
+                denoted by the greek letter lambda), is the wavelength of light coming
+                from the star (looking at its light in a spectrum with all wavelengths),
+                where the transmission of energy is the highest. Simply, the star emits
+                the most of that wavelength out of all the other wavelengths. Wien’s law
+                states the following:
+            </p>
+            <img class="equasion" src="wien.jpg"/>
+            <p>
+                Where <i>T</i> is the temperature (in <i>kelvins</i>), the numerator is
+                known as the constant of proportionality, and <i>lambda</i> is the peak
+                wavelength (in <i>meters</i>). Measuring the peak wavelength of a star
+                also, like with the apparent magnitude and the parallax, requires
+                measurements with instruments. This 3rd measurement however can tie into
+                spectral analysis, since we are taking the spectrum of the star, and
+                looking effectively at the most-emitted colour, or wavelength. It turns
+                out that blue light has more energy and is therefore emitted by hotter
+                objects than red light, which is emitted by relatively cooler stars.
+                This means that the equation makes sense, since the longer (redder) the
+                peak wavelength, the cooler the temperature value. Graphing intensity or
+                transmission against wavelength for a star (<i>figure 2</i>) can
+                visualize the wavelengths that a star emits.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="spectrumTemp.jpg"/>
+            <figcaption>
+                Figure 2: The graphed spectrum of a star with and without absorption
+                lines for elements (<i>image from Sloan Digital Sky Survey</i>).
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                As seen, the graph on the right looks at how the spectrum looks like in
+                reality, with all the absorption lines that are a testament to the
+                elements present in the star, and the type of star. On the left however,
+                we see the cleaned spectrum of the star where the absorption lines are
+                not included. There, the peak wavelength can clearly be seen at around
+                500 nm. This can then be used in Wien’s law to calculate the temperature.
+                The temperature is, other than the elements present, another clue for
+                the type of star dealt with.
+            </p>
+            <p>
+                Other than Wien’s law, there is another very reliable way, again
+                involving colour emitted, to calculate the temperature of a star. That
+                involves taking the apparent magnitude of the star through different
+                coloured filters. The apparent magnitude that was dealt with in the
+                analysis of the magnitudes and luminosity of 51 Pegasi involved
+                transparent, so called visible filters. However, there are many different
+                colour filters that can be used to calculate the magnitude and will yield
+                different results. Specifically, subtracting the value of the visible
+                filter from the measurement from the blue filter yields a so-called <b>B-V
+                colour index</b>, or magnitude. This magnitude can be thought of as an
+                indicator to temperature (<i>table 1</i>), since the smaller (brighter)
+                the B value is compared to the V value, the hotter the star must be, since
+                blue light has more energy and is therefore hotter than red light. A
+                smaller blue value therefore means a smaller value for the whole B-V
+                colour index, and therefore (since the magnitude scale is in reverse),
+                a hotter star.
+            </p>
+        </div>
+        <div class="table">
+            <div class="child">
+                <table>
+                    <th colspan=2>
+                        Table 1: Approximate temperature values corresponding to B-V magnitude
+                    </th>
+                    <tr>
+                        <th>B-V Magnitude</th>
+                        <th>Temperature (K)</th>
+                    </tr>
+                    <tr style="background-color:rgb(102, 4, 230);">
+                        <td>-0.31</td>
+                        <td>34,000</td>
+                    </tr>
+                    <tr style="background-color:rgb(26, 26, 231);">
+                        <td>-0.24</td>
+                        <td>23,000</td>
+                    </tr>
+                    <tr style="background-color:blue;">
+                        <td>-0.20</td>
+                        <td>18,500</td>
+                    </tr>
+                    <tr style="background-color:rgb(0, 81, 255);">
+                        <td>-0.12</td>
+                        <td>13,000</td>
+                    </tr>
+                    <tr style="background-color:rgb(0, 132, 255);">
+                        <td>0.0</td>
+                        <td>9500</td>
+                    </tr>
+                    <tr style="background-color:rgb(67, 218, 238);">
+                        <td>0.15</td>
+                        <td>8500</td>
+                    </tr>
+                    <tr style="background-color:rgb(0, 255, 242);">
+                        <td>0.29</td>
+                        <td>7300</td>
+                    </tr>
+                    <tr style="background-color:rgb(0, 255, 191);">
+                        <td>0.42</td>
+                        <td>6600</td>
+                    </tr>
+                    <tr style="background-color:rgb(200, 255, 0);">
+                        <td>0.58</td>
+                        <td>5900</td>
+                    </tr>
+                    <tr style="background-color:rgb(255, 230, 0);">
+                        <td>0.69</td>
+                        <td>5600</td>
+                    </tr>
+                    <tr style="background-color:orange;">
+                        <td>0.85</td>
+                        <td>5100</td>
+                    </tr>
+                    <tr style="background-color:rgb(255, 102, 0);">
+                        <td>1.16</td>
+                        <td>4200</td>
+                    </tr>
+                    <tr style="background-color:rgb(255, 72, 0);">
+                        <td>1.42</td>
+                        <td>3700</td>
+                    </tr>
+                    <tr style="background-color:rgb(129, 3, 3);">
+                        <td>1.61</td>
+                        <td>3000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="text">
+            <p>
+                This table however is only an approximation of the temperature.
+                However, a very bizarre equation has also been derived from this B-V
+                colour index, and it actually provides results comparable in accuracy or
+                even more accurate to those in Wien’s law. The equation is as follows:
+            </p>
+            <img class="equasion" src="BVEquasion.jpg"/>
+            <p>
+                Since the data that we are using for this article only includes the B-V
+                magnitude from brightness measurement through filters for the star 51
+                Pegasi, we will use this equation to calculate it’s temperature. The
+                B-V colour index of 51 Pegasi is measured as <b>0.67</b>:
+            </p>
+            <img class="equasion" src="BV.jpg"/>
+            <p>
+                As seen, there is not a lot of blue light in 51 Pegasi and therefore it
+                must not be very hot. Its temperature is calculated to be about
+                <b>5700 K</b>, proving that it has in fact almost the same temperature
+                as our Sun, whose temperature is 5778 K.
+            </p>
+            <img class="equasion" src="temp.jpg"/>
+            <p>
+                When looking at the B-V colour index, and determining how it is related
+                to the temperature of any star, I began to wonder how exactly these
+                quantities are related. Is it linear, quadratic, or something else. To
+                explore this, I agan used Python to program a scatter plot from 10,000
+                different stars in a dataset of clusters (stars from 68 different
+                observed clusters), and graphed their B-V magnitudes against their
+                temperature (<i>figure 3</i>). All of the clusters are colour coded
+                (some colours recur since there were not 68 colours in the program I used).
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="BV_Temp.jpg"/>
+            <figcaption>
+                Figure 3: My graph of B-V colour index vs. Temperature
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                This is very interesting to see that generally, as the B-V colour index
+                decreases (or the stars become bluer), the temperature also increases as
+                expected, but at an ever increasing rate. This means that as the blueness
+                of the star increases by a constant amount, the temperature also
+                increases but by a growing factor each time. It is also very interesting
+                to see that the clusters of the stars tend to group together in single
+                lines that follow the correlations, like strands of the greater scatter.
+                As of yet, I cannot explain why this is the case, since there is nothing
+                that should be special about the temperatures of stars in certain
+                clusters, and the cluster a star belongs to should not have an effect on
+                the way that its colour and temperature are correlated. Perhaps it might
+                be that the magnitudes of the clusters were observed together but with
+                slightly different fitting methods. This however is just a hypothesis.
+            </p>
+            <p>
+                Stars based on their temperatures, and also the elements that are
+                found in their spectra (most of which are a cause of the temperature)
+                have so called <b>spectral types</b>. Analyzing absorption lines for
+                elements in the spectrum of a star was detailed in the <a href="observations.html">methods section</a>
+                for radial velocity. The temperature can also be found from the spectrum
+                by Wien’s law. Therefore, it makes sense to call these classifications
+                the spectral type of a star. These classes (<i>table 2</i>), are also
+                often called just star types.  For 51 Pegasi, its spectrum, just like its
+                temperature, seems very similar to that of our Sun, with moderate
+                Hydrogen lines and some neutral metals. Therefore, 51 Pegasi fits in as
+                a hot G type star, around G2, like the sun. The numbers range for each
+                letter from 0-9, with 0 being the hottest.
+            </p>
+            <div class="table">
+                <table>
+                    <th colspan=3>Table 2: Spectral Classes of Stars</th>
+                    <tr>
+                        <th>Type</th>
+                        <th>Approximate Temperature (K)</th>
+                        <th>Elements Present</th>
+                    </tr>
+                    <tr style="background-color:blue;">
+                        <td>O</td>
+                        <td>>25,000</td>
+                        <td>He<sup>+</sup>, O<sup>++</sup>, N<sup>++</sup>, Si<sup>++</sup></td>
+                    </tr>
+                    <tr style="background-color:rgb(0, 174, 255);">
+                        <td>B</td>
+                        <td>10-25,000</td>
+                        <td>H, He, O<sup>+</sup>, N<sup>+</sup>, C<sup>+</sup>, Si<sup>+</sup></td>
+                    </tr>
+                    <tr style="background-color:rgb(0, 247, 255);">
+                        <td>A</td>
+                        <td>7.5-10,000</td>
+                        <td>H<sub>(strong)</sub>, Ca<sup>+</sup>, Mg<sup>+</sup>, Fe<sup>+</sup></td>
+                    </tr>
+                    <tr style="background-color:rgb(0, 255, 136);">
+                        <td>F</td>
+                        <td>6-7,500</td>
+                        <td>H<sub>(average)</sub>, Ca<sup>+</sup>, ionized metals</td>
+                    </tr>
+                    <tr style="background-color:rgb(255, 238, 0);">
+                        <td>G</td>
+                        <td>5-6,000</td>
+                        <td>H<sub>(weaker)</sub>, Ca<sup>+</sup>, ionized and neutral metals</td>
+                    </tr>
+                    <tr style="background-color:orange;">
+                        <td>K</td>
+                        <td>3.5-5,000</td>
+                        <td>H<sub>(weak)</sub>, Ca<sub>(strong)</sub>, neutral metals</td>
+                    </tr>
+                    <tr style="background-color:rgb(255, 51, 0);">
+                        <td>M</td>
+                        <td><3,500</td>
+                        <td>TiO, neutral metals</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="back">
+            <a class="back" href="stars.html">Back to Parameters Page</a>
+        </div>
+        <div id="footer">
+            <p>
+                Written by Botond Horvath
+            </p>
+        </div>
+    </body>
+</html>

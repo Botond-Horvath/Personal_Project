@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Exoplanet.org</title>
+        <link rel="icon" href="icon.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            body {
+                background-color:white;
+                margin:0;
+            }
+
+            .text {
+                margin:20px;
+            }
+
+            header {
+                background-image:url(title.jpg);
+                background-size:1450px 700px;
+            }
+
+            h1.title {
+                text-align:center;
+                color:blue;
+                font-family: 'Gill Sans';
+                font-style: italic;
+                padding-top: 50px;
+                padding-bottom:50px;
+                font-size:80px;
+                margin:0;
+            }
+
+            ul {
+                list-style-type: none;
+                background-color:black;
+			    margin:0;
+			    width:100%;
+			    padding:0;
+                overflow:hidden;
+			    box-shadow:2px 5px 10px black;
+            }
+
+            li {
+                float:left;
+            }
+
+            li a, .dropdown_button {
+                text-align:center;
+			    color:white;
+			    padding:10px;
+			    font-family:Gill Sans;
+			    font-size:20px;
+			    text-decoration:none;
+                border:none;
+                display:inline-block;
+            }
+
+            .current {
+                background-color:rgb(3, 3, 199);
+            }
+
+            li a:hover, .dropdown_content a:hover {
+                background-color:white;
+                color:black;
+                cursor:pointer;
+                transition:0.2s ease-in;
+            }
+
+            li.dropdown {
+                display:inline-block;
+            }
+
+            .dropdown_content {
+                display:none;
+                box-shadow:3px 3px 2px black;
+                background-color:black;
+                position:absolute;
+                z-index:1;
+            }
+
+            .dropdown_content > a {
+                text-decoration:none;
+                color:white;
+                display:block;
+                padding:10px;
+                font-family:Gill Sans;
+			    font-size:20px;
+                text-align:center;
+            }
+
+            .dropdown:hover .dropdown_content {
+                display: block;
+            }
+
+            h3.subtitle {
+                color:white;
+                background-color:rgb(3, 3, 199);
+                font-family:'Trebuchet MS';
+                font-weight:bold;
+                text-align:center;
+                margin:0;
+                padding:10px;
+            }
+
+            .sticky {
+                position:fixed;
+                top:0;
+            }
+
+            @media only screen and (max-width: 620px) {
+                h1.title {
+                    font-size: 80px;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+            <h1 class=title>Exoplanet Blog</h1>
+        </header>
+        <ul id="navId">
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="observations.html">Observational Data</a></li>
+            <li class="dropdown">
+                <a class="dropdown_button" href="#top">Parameter Calculations</a>
+                <div class="dropdown_content">
+                    <a href="stars.html">Host Star Parameters</a>
+                    <a href="parameters.html">Exoplanet Parameters</a>
+                </div>
+            </li>
+            <li><a href="data.html">Data Analysis</a></li>
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a class="current" href="bibliography.html">Bibliography</a></li>
+        </ul>
+        <h3 class=subtitle>
+            Sources Used for this Project
+        </h3>
+        <div class="text">
+            <p>
+                <i>Astrophysics. New submissions.</i> (n.d.). Cornell University. from
+                <a href='https://arxiv.org/list/astro-ph/new'>https://arxiv.org/list/astro-ph/new</a>
+            </p>
+            <p>
+                Bashi, D., Helled, R., Zucker, S., & Mordasini, C. (2017). Two empirical regimes of the planetary mass-radius relation. <i>Astronomy & Astrophysics, 604</i>(A&A).
+                <a href='https://doi.org/10.1051/0004-6361/201629922'>https://doi.org/10.1051/0004-6361/201629922</a>
+            </p>
+            <p>
+                Baidya, D. (2019, October 21). <i>Star dataset to predict star types.</i> Kaggle. Retrieved December 28, 2021, from <a href='https://www.kaggle.com/deepu1109/star-dataset'>https://www.kaggle.com/deepu1109/star-dataset</a>
+            </p>
+            <p>
+                Bennett, J. O., Donahue, M. O., Schneider, N., & Voit, M. (2020). <i>The cosmic perspective</i> (9th ed.).
+                Pearson.
+            </p>
+            <p>
+                <i>Calculating Exoplanet Properties.</i> Simon Fraser University . (n.d.). Retrieved September 19, 2021, from <a href='https://www.sfu.ca/colloquium/PDC_Top/astrobiology/discovering-exoplanets/calculating-exoplanet-properties.html'>https://www.sfu.ca/colloquium/PDC_Top/astrobiology/discovering-exoplanets/calculating-exoplanet-properties.html</a>
+            </p>
+            <p>
+                <i>Circular motion and satellite motion.</i> The Physics Classroom. (n.d.). Retrieved November 1,
+                2021, from <a href='https://www.physicsclassroom.com/class/circles'>https://www.physicsclassroom.com/class/circles</a>
+            </p>
+            <p>
+                <i>Data - tess - transiting exoplanet survey satellite.</i>TESS. (2018, July 31). Retrieved October 20, 2021, from <a href='https://tess.mit.edu/science/data/'>https://tess.mit.edu/science/data/</a>'
+            </p>
+            <p>
+                <i>Downloads.</i> Aperture Photometry Tool. (n.d.). Retrieved November 17, 2021, from
+                <a href='https://www.aperturephotometry.org/downloads/'>https://www.aperturephotometry.org/downloads/</a>'
+            </p>
+            <p>
+                Dumusque, X. (2016). Radial Velocity Fitting Challenge. <i>Astronomy & Astrophysics, 593</i>(A&A).
+                <a href='https://doi.org/10.1051/0004-6361/201628672'>https://doi.org/10.1051/0004-6361/201628672</a>
+            </p>
+            <p>
+                Eklavya. (2019, November 11). <i>Exoplanets II: Interpretation of data.</i> Medium. Retrieved October 25, 2021, from <a href='https://towardsdatascience.com/exoplanets-ii-interpretation-of-data-c9e554c4f3fe'>https://towardsdatascience.com/exoplanets-ii-interpretation-of-data-c9e554c4f3fe</a>
+            </p>
+            <p>
+                Etakla, E. (2017, March 17). <i>Exploring the exoplanets.</i> Kaggle. Retrieved September 12, 2021, from <a href='https://www.kaggle.com/etakla/exoploring-the-exoplanets'>https://www.kaggle.com/etakla/exoploring-the-exoplanets</a>
+            </p>
+            <p>
+                <i>Hunting for Extrasolar Planets: Methods and Results</i> [PowerPoint slides]. (n.d.). University of Texas at Austin. <a href='http://www.as.utexas.edu/astronomy/education/fall08/scalo/secure/309l_sep23_planets.pdf'>http://www.as.utexas.edu/astronomy/education/fall08/scalo/secure/309l_sep23_planets.pdf</a>
+            </p>
+            <p>
+                Impley, C. (n.d.). <i>Astrobiology: Exploring other worlds.</i> Coursera. Retrieved September 23, 2021, from <a href='https://www.coursera.org/learn/astrobiology-exploring-other-worlds'>https://www.coursera.org/learn/astrobiology-exploring-other-worlds</a>
+            </p>
+            <p>
+                KSU. (1998, April 10). Apparent and absolute magnitudes. Retrieved November 3, 2021, from <a href='https://www.phys.ksu.edu/personal/wysin/astro/magnitudes.html'>https://www.phys.ksu.edu/personal/wysin/astro/magnitudes.html</a>
+            </p>
+            <p>
+                Khan, S. [Khan Academy]. (2008, April 14). <i>Gravitation (part 2) | Centripetal force and gravitation | Physics | Khan Academy </i>[video]. YouTube.
+                <a href='https://www.youtube.com/watch?v=8i0j3j16yFk'>https://www.youtube.com/watch?v=8i0j3j16yFk</a>
+            </p>
+            <p>
+                Kornei, K. (2021, October 25). <i>Gap in exoplanet size shifts with age.</i> Eos. Retrieved December 19, 2021, from <a href='https://eos.org/articles/gap-in-exoplanet-size-shifts-with-age'>https://eos.org/articles/gap-in-exoplanet-size-shifts-with-age</a>
+            </p>
+            <p>
+                <i>MatPlotLib: Visualization with Python.</i> Matplotlib. (n.d.). Retrieved October 15, 2021, from <a href='https://matplotlib.org/'>https://matplotlib.org/</a>'
+            </p>
+            <p>
+                Mayor, M., Queloz, D. (1995). A Jupiter-mass companion to a solar-type star. <i>Nature Publishing Group. 378.</i> 255-359.
+            </p>
+            <p>
+                <i>Measuring Stellar Masses.</i> Lumen Astronomy. (n.d.). Retrieved October 15, 2021, from <a href='https://courses.lumenlearning.com/astronomy/chapter/measuring-stellar-masses/'>https://courses.lumenlearning.com/astronomy/chapter/measuring-stellar-masses/</a>'
+            </p>
+            <p>
+                Ms. Boon,  Ms. Yearwood, Elania Hyde, Anita Nasiri, Hanno Rein, Lea Hirsch, Gaspar Bakos, Kristen Menou (personal communication).
+            </p>
+            <p>
+                Palma, C. (n.d.). <i>Stellar Velocities.</i> PennState. Retrieved October 20, 2021, from <a href='https://www.e-education.psu.edu/astro801/content/l4_p7.html'>https://www.e-education.psu.edu/astro801/content/l4_p7.html</a>
+            </p>
+            <p>
+                Parimucha, S., Pribulla, T., & Vanko, M. (2000). New Photoelectric Light Curves of AB Andromedae. <i>Information Bulletin on Variable Stars, 4834</i>(1). <a href='https://articles.adsabs.harvard.edu/pdf/2000IBVS.4834....1P'>https://articles.adsabs.harvard.edu/pdf/2000IBVS.4834....1P</a>
+            </p>
+            <p>
+                Pych, W., et al. (2004). Radial Velocity Studies of Close Binary Stars. IX. <i>The Astronomical Journal, 172</i>(3). 1712-1719. <a href='https://iopscience.iop.org/article/10.1086/382105/pdf'> 10.1086/382105</a>
+            </p>
+            <p>
+                Rebull, L. [Luisa Rebull]. (2013, May 16). <i>NITARP Tutorial: APT overview </i>[video]. Youtube.
+                <a href='https://www.youtube.com/watch?v=5lXAWfBW_NQ'>https://www.youtube.com/watch?v=5lXAWfBW_NQ</a>
+            </p>
+            <p>
+                Rodler, F., Lopez-Morales, M., & Ribas, I. (2012). Weighing the Non-Traniting Hot Jupiter τ Boo b. <i>The Astrophysical Journal Letters, 753</i>(1). <a href='https://iopscience.iop.org/article/10.1088/2041-8205/753/1/L25'>https://iopscience.iop.org/article/10.1088/2041-8205/753/1/L25</a>
+            </p>
+            <p>
+                Roscoe, F. S. (1942). The Spectrographic Orbit of the Companion to Rigel. <i>American Astronomical Society, 95.</i> 421 - 424. <a href='https://ui.adsabs.harvard.edu/abs/1942ApJ....95..421S/abstract'>10.1086/144412.</a>
+            </p>
+            <p>
+                <i>The extrasolar planets encyclopaedia.</i> The extrasolar planets encyclopaedia. (n.d.). Retrieved September 10, 2021, from <a href='http://exoplanet.eu/'>http://exoplanet.eu/</a>'
+            </p>
+            <p>
+                Université de Strasbourg. (n.d.). Vizier. Retrieved January 3, 2022, from <a href='https://vizier.cds.unistra.fr/viz-bin/VizieR'>https://vizier.cds.unistra.fr/viz-bin/VizieR</a>
+            </p>
+            <p>
+                Université libre de Bruxelles. (n.d.). <i>The 9th Catalogue of Spectroscopic Binary Orbits.</i> SB9. Retrieved December 19, 2021, from <a href='https://sb9.astro.ulb.ac.be'>https://sb9.astro.ulb.ac.be</a>
+            </p>
+            <p>
+                UNL Astronomy Education. (n.d.). Retrieved September 12, 2021, from <a href='https://astro.unl.edu/'>https://astro.unl.edu/</a>'
+            </p>
+            <p>
+                Winn, J. N. (2014). Transits and Occultations. <i>Cornell University,</i> Retrieved October 6, 2021 from <a href='https://arxiv.org/abs/1001.2010v5'>https://arxiv.org/abs/1001.2010v5</a>
+            </p>
+        </div>
+        <script>
+            window.onscroll = function() {myFunction()};
+
+            var nav = document.getElementById("navId");
+            var sticky = nav.offsetTop;
+
+            function myFunction() {
+            if (window.pageYOffset > sticky) {
+                nav.classList.add("sticky");
+            } else {
+                nav.classList.remove("sticky");
+            }
+            }
+        </script>
+    </body>
+</html>

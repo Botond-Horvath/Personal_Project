@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Exoplanet.org</title>
+        <link rel="icon" href="icon.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            body {
+                background-color:white;
+                margin:0;
+                font-family:'Verdana', sans-serif;
+            }
+
+            .text {
+                margin:40px;
+                text-align:center;
+            }
+
+            h3.subtitle {
+                color:white;
+                background-color:darkblue;
+                font-family:'Trebuchet MS';
+                font-weight:bold;
+                text-align:center;
+                margin:0;
+                padding:10px;
+                position:fixed;
+                top:0;
+                width:100%;
+            }
+
+            img.equasion {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                width:15%;
+                transition:0.4s
+            }
+
+            img.equasion:hover {
+                cursor:pointer;
+                width:20%;
+                border:2px 2px 1px grey;
+                box-shadow:2px 3px 2px black;
+            }
+
+            figure.figure {
+                margin:0;
+                width:100%;
+            }
+
+            figure > img {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                width:40%;
+                box-shadow:none;
+                transition:0.6s;
+            }
+
+            figure > img:hover {
+                box-shadow:2px 2px 2px grey;
+                cursor:pointer;
+            }
+
+            figure > figcaption {
+                padding:10px;
+                text-align:center;
+            }
+
+            p > a {
+                color:rgb(46, 91, 216);
+                font-weight:bold;
+                text-decoration:none;
+                transition:0.2s ease-in;
+            }
+
+            p > a:hover {
+                background-color:beige;
+                cursor:pointer;
+            }
+
+            div.back {
+                text-align:center;
+                margin:30px;
+            }
+
+            a.back {
+                padding:10px;
+                text-decoration:none;
+                background-color:cyan;
+                color:black;
+                width:100%;
+                transition:0.3s;
+            }
+
+            a.back:hover {
+                cursor:pointer;
+                background-color:black;
+                color:white;
+            }
+
+            div#footer {
+                background-image:url(title.jpg);
+                background-size:1450px 700px;
+                color:white;
+                margin:0;
+                padding:0;
+                min-width:100%;
+                float:left;
+            }
+
+            div#footer > p {
+                text-align:center;
+                margin:30px;
+            }
+
+            @media only screen and (max-width: 700px) {
+                img.equasion {
+                    width:50%;
+                }
+                img.equasion:hover {
+                    width:60%;
+                }
+                figure > img {
+                    width:100%;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <h3 class=subtitle>
+            Radius, and therefore Size
+        </h3>
+        <div class="text">
+            <p style="margin-top:60px;">
+                Based on all that we have established, calculating the radius of a star
+                will not be a difficult task. We know that the Stephan-Boltzmann law
+                states that the surface area (radius), temperature, and luminosity of
+                a star are related in the following way:
+            </p>
+            <img class="equasion" src="rad1.jpg"/>
+            <p>
+                So for the case of 51 Pegasi, our star of interest, we know that it has
+                a luminosity relative to the Sun of <b>1.36 solar luminosities</b>. We
+                also know that it has a temperature of about <b>5700K</b>, which is about
+                0.99 or roughly <b>1 solar temperature</b>:
+            </p>
+            <img class="equasion" src="rad2.jpg"/>
+            <p>
+                Solving for radius we get about 1.17, or about <b>1.2 solar radii</b>:
+            </p>
+            <img class="equasion" src="rad3.jpg"/>
+            <p>
+                This reflects exactly what was predicted from the Stephan Boltzmann law,
+                that 51 Pegasi would be larger than the Sun, even though it is the same
+                temperature (perhaps even slightly cooler), since its luminosity was
+                greater than that of the Sun. This abnormal size is one of the primary
+                reasons scientists tend to put this star on the border between main
+                sequence and sub giant, and why, due to its high luminosity from its
+                size, sometimes put it in luminosity class IV, or as a Subgiant. The
+                elements in its spectrum also suggest that it is running out of
+                Hydrogen, and that it might be nearing the end of the prime phase of its
+                life. Whatever the case, it can be for sure stated that 51 Pegasi is
+                older than the Sun based on this, and that it has less time left than
+                the Sun before it sheds its shell and remains as a white dwarf.
+            </p>
+            <p>
+                Now it is possible to calculate the radius of many different stars.
+                Comparing this value to the luminosity in 10,000 different stars yielded
+                very interesting results, that can further be explained by findings in
+                the HR section (<i>figure 6</i>). As seen, main sequence, giant, and
+                dwarf stars are all labeled on a logarithmic scale.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="rad_lum.jpg"/>
+            <figcaption>
+                Figure 6: Log radius vs. luminosity for different star types
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                It can be seen again that with main sequence stars, there is a clear
+                relation
+            </p>
+            <p>
+                Even though this is all interesting information, due to the fact that
+                the exoplanet 51 Pegasi b that we are interested about was detected with
+                the radial velocity method and not the transit method, we would be more
+                interested in knowing the mass of this star, the only mysterious
+                parameter that we still have not been able to calculate. In fact, there
+                is no way to calculate it, since it would only be possible to imply it
+                if the force of gravity from another significantly massive object (an
+                exoplanet is too small and insignificant) were having an effect on it.
+                However, it is possible to estimate the mass of 51 Pegasi pretty well,
+                the journey there however will be another very long and interesting road.
+            </p>
+        </div>
+        <div class="back">
+            <a class="back" href="stars.html">Back to Parameters Page</a>
+        </div>
+        <div id="footer">
+            <p>
+                Written by Botond Horvath
+            </p>
+        </div>
+    </body>
+</html>

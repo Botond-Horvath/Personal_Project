@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Exoplanet.org</title>
+        <link rel="icon" href="icon.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            body {
+                background-color:white;
+                font-family:'Verdana', sans-serif;
+                margin: 0;
+            }
+
+            header {
+                background-image:url(title.jpg);
+                background-size:1450px 700px;
+            }
+
+            h1.title {
+                text-align:center;
+                color:blue;
+                font-family: 'Gill Sans';
+                font-style: italic;
+                padding-top: 50px;
+                padding-bottom:50px;
+                font-size:80px;
+                margin:0;
+            }
+
+            img.equasion {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                width:10%;
+                transition:0.4s
+            }
+
+            img.equasion:hover {
+                cursor:pointer;
+                width:20%;
+                border:2px 2px 1px grey;
+                box-shadow:2px 3px 2px black;
+            }
+
+            figure.figure {
+                margin:0;
+                width:100%;
+            }
+
+            figure > img {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                width:30%;
+                box-shadow:none;
+                transition:0.6s;
+            }
+
+            figure > img:hover {
+                box-shadow:2px 2px 2px grey;
+                cursor:pointer;
+                z-index:1;
+                width:50%;
+            }
+
+            figure > figcaption {
+                padding:10px;
+                text-align:center;
+            }
+
+            ul {
+                list-style-type: none;
+                background-color:black;
+			    margin:0;
+			    width:100%;
+			    padding:0;
+                overflow:hidden;
+			    box-shadow:2px 5px 10px black;
+            }
+
+            li {
+                float:left;
+            }
+
+            li a, .dropdown_button {
+                text-align:center;
+			    color:white;
+			    padding:10px;
+			    font-family:Gill Sans;
+			    font-size:20px;
+			    text-decoration:none;
+                border:none;
+                display:inline-block;
+            }
+
+            .current {
+                background-color:rgb(3, 3, 199);
+            }
+
+            li a:hover, .dropdown_content a:hover {
+                background-color:white;
+                color:black;
+                cursor:pointer;
+                transition:0.2s ease-in;
+            }
+
+            li.dropdown {
+                display:inline-block;
+            }
+
+            .dropdown_content {
+                display:none;
+                box-shadow:3px 3px 2px black;
+                background-color:black;
+                position:absolute;
+                z-index:1;
+            }
+
+            .dropdown_content > a {
+                text-decoration:none;
+                color:white;
+                display:block;
+                padding:10px;
+                font-family:Gill Sans;
+			    font-size:20px;
+                text-align:center;
+            }
+
+            .dropdown:hover .dropdown_content {
+                display: block;
+            }
+
+            h3.subtitle {
+                color:white;
+                background-color:rgb(3, 3, 199);
+                font-family:'Trebuchet MS';
+                font-weight:bold;
+                text-align:center;
+                margin:0;
+                padding:10px;
+            }
+
+            .sticky {
+                position:fixed;
+                top:0;
+            }
+
+            .text {
+                margin:40px;
+            }
+
+            div#footer {
+                background-image:url(title.jpg);
+                background-size:1450px 700px;
+                color:white;
+                margin:0;
+                padding:0;
+                min-width:100%;
+                float:left;
+            }
+
+            div#footer > p {
+                text-align:center;
+                margin:30px;
+            }
+
+            @media only screen and (max-width: 650px) {
+                h1.title {
+                    font-size: 80px;
+                }
+                .figure > img {
+                    width:100%;
+                }
+                .figure > img:hover {
+                    width:100%;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+            <h1 class=title>Exoplanet Blog</h1>
+        </header>
+        <ul id="navId">
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="observations.html">Observational Data</a></li>
+            <li class="dropdown">
+                <a class="dropdown_button" href="#top">Parameter Calculations</a>
+                <div class="dropdown_content">
+                    <a href="stars.html">Host Star Parameters</a>
+                    <a href="parameters.html">Exoplanet Parameters</a>
+                </div>
+            </li>
+            <li><a class="current" href="data.html">Data Analysis</a></li>
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="bibliography.html">Bibliography</a></li>
+        </ul>
+        <h3 class=subtitle>
+            The Data Science of Exoplanets
+        </h3>
+        <div class="text">
+            <p>
+                Most of us are familiar with our own solar system, and how we have a Sun which is a star and planets orbiting
+                that star, one of which is our Earth. We know that there are gas giant planets that have large masses and sizes,
+                and are made up mostly of gases such as Hydrogen and Helium, and that there are smaller rocky solid planets,
+                such as the Earth or Mars, that are also less massive. Many of us have made the observation that planets such as
+                Mercury that are closer to the Sun have shorter years, and are also hotter than the planets that orbit far away,
+                such as Neptune. Some of us might have even made the distinction between rocky planets found closer to the sun
+                than the gas giants, or that far away orbits tend to look more funky and elliptical as opposed to close ones.
+                All of these are ways that we see the universe, using the model of our own solar system. It has been this solar
+                system that has provided the basis for many theories about the way that planets behave for centuries. In 1995
+                however, a remarkable discovery was made that changed the course of astronomy. For the first time, a planet that
+                orbits a star that was not our Sun was detected. This was a Jupiter sized gas giant that orbited remarkably close
+                to its parent star: <i>51 Pegasi</i>. From the star’s name, the planet’s name was deemed <i>51 Pegasi b</i>.
+                So there are planets outside our solar system, and we know how to calculate the parameters of these planets
+                once detected, such as their masses, radii, or year length. To date, there have been more than 4000 exoplanets discovered,
+                and their number is growing by the day. Using a CSV dataset that contains 3500 of these planets, what can we
+                untangle from all of this data? <i>51 Pegasi b</i> was an exoplanet discovery that raised many questions,
+                since it was a Jupiter- like planet orbiting in the distance of Mercury to its star! So is our solar system
+                really a good model for the rest of the universe?
+            </p>
+            <p>
+                One of the most interesting behaviours of the planets in our solar system was observed by Johannes Kepler
+                back in the 17th century. He observed that the orbital period, or in other words the length of time that
+                it takes for a planet to complete one orbit around the Sun squared is proportional  to the semi-major
+                axis of the orbit cubed. Now, for the sake of this article, it is sufficient to think of the semi major
+                axis as the distance from the planet to its star, however, the semi-major axis is the length of the line
+                segment joining the center of an ellipse to its vertex. Since no orbit is perfectly circular and therefore
+                every orbit is eccentric to some degree and forms an elliptical orbit, the semi-major axis can also be
+                used to describe planetary orbits and the distance between a planet and its star. The general unit for the
+                semi-major axis is the astronomical unit (AU), which is simply the distance from the Sun to the Earth.
+                The relation became known as Kepler’s 3rd law of planetary motion, and is denoted in the following way:
+            </p>
+            <img class=equasion src='Pa_equasion.jpg'/>
+            <p>
+                Evidently, in the equation, <i>P</i> denotes the period and <i>a</i> the semi-major axis. Now using data on
+                the periods and semi-major axes of exoplanets, it is also possible to compare these two parameters and get
+                remarkable results (<i>figure 1</i>). We can see clearly the function that denotes this correlation present
+                with most exoplanets. Each exoplanet is denoted by a dot, forming a scatter plot.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src='period_sma.jpg'/>
+            <figcaption>
+                Figure 1: Exoplanet Period vs. Semi-Major Axis
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                As seen, Kepler’s law is universal, and applies to all exoplanets that have been discovered. Notice
+                though that as the exoplanet’s semi-major axes increase, and they get more distant from their star,
+                the correlation becomes weaker than at close ranges. This could be caused by a greater eccentricity in
+                farther orbits, which means that orbits far away are more elliptical (<i>figure 2</i>). This is an observation
+                that was made in the introduction about our solar system, and as seen, applies universally. However,
+                it could simply just be related to the fact that it is more difficult to make observations or precise
+                periods and thereby calculations of semi-major axes at further planets, because of limitations in the
+                instruments used.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src='sma_eccentricity.jpg'/>
+            <figcaption>
+                Figure 2: Exoplanet Semi-Major Axis vs. Eccentricity (the non-outstanding correlation is made
+                clear by the regression line)
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                Another observation that we know is true for our solar system is that as the semi-major axis increases,
+                or as planets get farther away from the Sun, they become colder. This makes perfect sense because the
+                farther away you are from the Sun, the less of its heat you would get. Most heat data for exoplanets are
+                estimations, and they are estimated from the distance that the planets are from their star. So yes,
+                it is evident that the data (<i>figure 3</i>) will show this. The habitable zone is labeled on the graph by a
+                green band. This zone is thought of loosely as the zone where liquid water is able to exist, or from 0-100°C
+                in general. It is called the habitable zone because most astrobiologists agree that liquid water is one of
+                the essential building blocks of life.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src='sma_temperature.jpg'/>
+            <figcaption>Figure 3: Exoplanet Temperature vs. Semi-Major Axis </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                As seen, the black dot on the graph represents the Earth. It can be seen that it does indeed sit in the
+                “habitable zone”, and in the lower range of that. It makes sense, because the average temperature of the
+                earth is about 10-15°C. Furthermore, it can be seen that when it comes to the distance from the star,
+                habitable planets range from directly close to their star (probably if their star is a cold red dwarf),
+                to about 2 Earth distances (if their star is larger and hotter than the Sun). So overall, the Earth is an
+                average distance for a habitable planet, and that is probably due to the fact that the Sun is average in
+                terms of mass and therefore heat (<i>figure 4</i>). Also, there are many other planets that sit in the
+                habitable zone in terms of temperature, and this opens up a lot of doors for the possibility of life
+                developing outside our solar system. Even directly next to Earth, there are at least 10-20 planets. Another
+                interesting finding is about the outliers of the data. <i>HD-220074 b</i> and <i>HD-208527 b</i> stand
+                out clearly from the trendline for being hotter than they should. It actually turns out that they are so
+                large in mass (11 and 9 Jupiter-masses respectively) that they are capable of generating some of their
+                own heat, and are on the limit of being classified as Brown Dwarfs, or relatively cold and small stars!
+            </p>
+        </div>
+        <figure class="figure">
+            <img src='stellar_hist.jpg'/>
+            <figcaption>Figure 4: Distribution of suns with planets for mass</figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                So due to the nature of our Sun being very typical and average, Earth sits right in the middle of the
+                distribution of planets that fall in the habitable zone. There are also a remarkably large number of
+                these planets, and we see some interesting outliers when exceptionally large masses come in.
+            </p>
+            <p>
+                All of that being said, there are more observations that can be explored. For example, is our solar system
+                a correct model with regards to the observation that planets farther away are less dense and therefore
+                form gas giants, and planets that are close from more rocky planets? This is a statement that is generally
+                accepted, and is also underlain by physics: that as it gets colder far away, lighter elements like gases
+                can also condense, and form planets that will therefore be more gaseous, less dense, and form giants. It
+                turns out that the statement is generally correct, but that there are many catches (<i>figure 5</i>). First of
+                all, how is it possible to distinguish a rocky planet from a gas giant or ice giant (like Neptune)? This
+                turns out to be very hard, and cannot be done perfectly. All that we can do is estimate, and density can
+                aid this estimation. If the planet has a density over 3, it is probably a rocky planet, since it is closer
+                to the density of Iron (7.9g/cm&sup3;) or most rocks (3g/cm&sup3;) than most gases like Hydrogen or Helium,
+                that have low densities of less than 1g/cm&sup3;. Still however, this is a very loose aid, and not perfect.
+                Due to this, the data is also very loose and does not follow a strong rule. General findings though can be
+                interpreted.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src='density_categories.jpg'/>
+            <figcaption>
+                Figure 5: Breakdown of Temperature vs. Semi-Major Axis based on Density
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                Firstly, ferrous (mostly made of Iron) and rocky planets are generally seen as being concentrated closer
+                to their star, within 2AU as opposed to low density planets that are mostly gaseous, which aligns with our
+                expectations. The gaseous planets however can be found everywhere. Now this is one of the catches, that
+                gaseous planets should be found further out, where gases can condense in the cold conditions, and should
+                not venture above the condensation line on the graphs. Physically, gas giants cannot form in those hot
+                conditions of up to 2500°K! Opposite of this expectation, there are actually more gas giants of low density
+                close to their stars, within the range of 0-1AU. Now it is well possible that there is some bias in this
+                data, since gas giants with short periods (close to their star) are the easiest to detect. They stand out
+                and do not take as long to observe! However, this doesn’t answer the fact that they cannot form in those
+                conditions, where Hydrogen is a thin hot vapour, far from condensing.
+            </p>
+            <p>
+                There are many theories that have been proposed to explain this phenomenon. One of the most well known is
+                the theory of migrating planets, that is that some planets are unstable in their orbits and do not stay
+                where they formed. Some of these gas giants could have formed in the “correct” zone but migrated towards
+                their stars due to outside effects. This is plausible, since the Moon itself is moving away from the Earth
+                at a rate of roughly 3.8cms per year. Interestingly, the first exoplanet <i>51 Pegasi b</i> already mentioned
+                was one of these “<i>Hot Jupiters</i>” as they were deemed, and that is where much of the thinking changed
+                in the way that we regarded our small solar system as opposed to the universe. This is an example of something
+                that has been found in exoplanets, but of which there is no example in our solar system.
+            </p>
+            <p>
+                Diving a little deeper into this new group of migrated “<i>Hot Jupiters</i>” sparks even clearer results
+                (<i>figure 6</i>). This sort of <i>Radius vs. Period</i> or <i>Radius vs. Semi-Major Axis</i> graph can
+                almost be thought of as a model of all solar systems combined. The further you move right, the farther you
+                get from the star on the left of each graph, something that is true for both semi-major axis and period
+                (<i>figure 1</i>), and the further up you go, the larger the planet becomes. If such a plot were applied to
+                our solar system, we would see a general upward trend due to some of the concepts already explored
+                (planets would get larger further away from the star). Plotting 3500 exoplanets however yields a more
+                clear picture of the universe, and yields some different findings.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src='grouping.jpg'/>
+            <figcaption>Figure 6: Grouping plots for typical exoplanet types</figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                The general weak positive correlation can be pointed out on both graphs, and our solar system also follows
+                a similar pattern. However, the group of <i>Hot Jupiters</i> can be distinguished very clearly, being a group
+                of larger and more massive outliers (as opposed to the more common low mass planets in the general correction)
+                that are about 0.75 - 1.75 Jupiter radii, and also are very close to their corresponding stars (within 0.1AU).
+                However, it is apparent that there is some bias in the data, and the group of <i>Hot Jupiters</i> in
+                reality is relatively not this large. It can be seen for example that there are not many measurements that
+                are made outside of 0.2AU, and our planet Earth is at 1AU, Jupiter being at 5AU! So evidently, the techniques
+                at our disposal to detect these planets are very limited and favour planets that are close to their stars,
+                are large, and have short periods, exactly the group of <i>Hot Jupiters</i>. However, 3500 exoplanets,
+                and the visible trend is still enough data to be able to declare this group of planets a new group,
+                something that wouldn’t have been imagined before the discovery of <i>51 Pegasi b</i>.
+            </p>
+            <p>
+                There is something else that stands out in these scatter plots, and it makes perfect sense. For the planets
+                of which we do know the mass, we see more green (low mass) planets at the bottom of the graphs, and more
+                high mass red ones as we go up. In other words, the mass tends to increase with radius. Now the larger a
+                planet is, it is expected to have more mass, so this makes sense. Overall therefore, there are two takeaways
+                from these graphs that can be extended: Bias is ever present in the data, and mass and radius are related.
+            </p>
+            <p>
+                First, how are mass and radius related? Is it really just a simple upward trend, or is there more to it?
+                Well, it turns out that when compared with scatter plots (<i>figure 7</i>), radius, mass, and density show very
+                interesting correlations. It is worth knowing that density is calculated from mass and radius, using the
+                formula for density being <i>m/V</i>, where we know that the volume of a sphere can be calculated as
+                <i>4/3πr&sup3;</i>. Since all planets are spheres due to the equal force of gravity, these two formulas can be
+                combined to form the formula for the density of any planet:
+            </p>
+            <img class=equasion src='density.jpg'/>
+            <p>
+                It can be seen from the comparisons that radius and mass are not as perfectly correlated in a line as one
+                would expect. Up until planets of about 0.3 Jupiter masses, there is a pretty drastic increase of mass
+                with radius. However, by the time we reach 0.4 Jupiter masses and certainly 0.5, the curve flattens, and
+                planets still get more massive, but do not get larger. This is very important, because it means that the
+                planets get more dense, since if their mass is increasing but their size is stopping to increase, the
+                planets will have more and more mass in the same space causing them to have an increase in density. So we
+                have just made a general very important observation about how planets behave as they increase in mass.
+                They expand and increase in size as all of that mass accumulates on them, but as they reach about the size
+                of Neptune or Uranus, and certainly Jupiter, they halt with this expansion, and the gases that form them
+                (since by this stage we are dealing with Gas Giants) begin to collect and become more dense. This could
+                be caused by the fact that the gravitational force of these planets with mass become so strong that the
+                gases begin to be pulled towards the center of the planet, and compress, thereby halting expansion, and also
+                increasing density.
+            </p>
+            <p>
+                On the graph of <i>density vs. mass</i>, this is precisely what we can see. Up to about 0.5 Jupiter masses,
+                density decreases drastically, which is something that we would expect, since Earth is more dense than
+                Mars which is more dense than Saturn and so on. However, by 1 Jupiter mass planets have stopped expanding
+                but kept growing in mass, causing an increase in density. In fact, our own solar system shows this too,
+                since Jupiter is actually more dense than Saturn (densities of 1.33 and 0.69 g/cm&sup3; respectively). So
+                there are a lot of important general observations that can be made of planets using exoplanet data.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src='mass_radius_density.jpg'/>
+            <figcaption>
+                Figure 7: Exploring the relations of mass, radius and density in planets
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                Finally, the final graph raises many questions. We see what is expected: density decreases as radius
+                increases, so the larger the planet, the lower the density will generally be. This again makes sense,
+                just as the 2nd visualization, since Earth is more dense than Mars, which is again more dense than Jupiter.
+                Again, just as expected, around ¾ Jupiter radii, we see a rebound in the density of the planets, as they
+                become very large. However, unlike in the previous graph, after 1 Jupiter radius, the density starts again
+                to decrease. One possible explanation could be what we see in the <i>mass vs. radius</i> plot, that at very
+                large masses, the radius actually starts to decrease again with the exceptional gravitational forces. So the
+                largest planets by radius are actually not the most massive, so this could be related to that finding.
+            </p>
+            <p>
+                The outliers also require investigation. <i>Kepler-277b</i> for example is the first planet that stands out.
+                It is way too small to be as massive as it is. It turns out in fact that it is the second most massive
+                and third largest rocky planet ever discovered. It is more massive than Neptune and is made mostly of rock!
+                The outlier of <i>Kepler-413b</i> is also worth mentioning. It has a mass not too short of Saturn, and a
+                density approaching that of Earth. It is noted in databases as a Gas Giant, however, these findings would
+                challenge that view. Unless it is an error in the dataset, there can be no gas giant with a density in
+                between that or rock and Iron.
+            </p>
+            <p>
+                The second point that was mentioned with the observation of the <i>Hot Jupiter</i> group was the possible bias
+                in the data dealt with. To understand limitations in data collection, we first need to understand the
+                methods used. For the 3500 exoplanets in this dataset, most of them were discovered with 2 methods:
+                <i>transit</i> and <i>radial velocity</i> (RV for short). The transit method looks at dimming in the light
+                of a star to detect an exoplanet orbiting the star and blocking out that light, and RV looks at shifted light
+                frequencies coming in from a star, resulting in a wobble towards and away from Earth due to the gravitational
+                tug of an exoplanet. There are then three other methods that were used for the discovery of some planets.
+                There are <i>microlensing</i> (detecting distortions in the fabric of space-time), <i>imaging</i>
+                (directly taking an image of an exoplanet by blocking out the light of its star), and finally <i>timing</i>
+                (used for specific types of exoplanets orbiting a pulsar, or neutron star). Using a bar graph, we can see
+                the amount of exoplanets that were discovered with the use of each method (<i>figure 8</i>).
+            </p>
+        </div>
+        <figure class="figure">
+            <img src='method.jpg'/>
+            <figcaption>Figure 8: Breakdown of exoplanets discovered per method</figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                As can be seen, even though radial velocity was the method used for the discovery of most early
+                exoplanets, like <i>51 Pegasi b</i>, the transit method has been overwhelmingly popular in recent years,
+                with over 2500 of the 3500 exoplanets in the dataset detected with the method. The Kepler space telescope
+                for example uses this method for exoplanet detection, and therefore all Kepler name exoplanets were
+                discovered with the use of this method. The rest are very small, only with a couple dozen exoplanet
+                discoveries made.
+            </p>
+            <p>
+                Now let's break this data down to look at the bias. First, we can graph the breakdown of the masses of
+                exoplanets that were discovered with each method (<i>figure 9</i>). As seen here, the majority of the planets
+                were discovered with the use of RV. This is due to the fact that from RV observations, the mass of an
+                exoplanet can be calculated, but not the radius, whereas for transit, it’s vice versa. So the exoplanets
+                under transit here must have been observed with radial velocity also in order to find the mass, after
+                being detected first by transit.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src='mass_method.jpg'/>
+            <figcaption>
+                Figure 9: Breakdown of exoplanets detected per mass category with each method
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                It can be seen clearly that the RV method favours larger mass planets over smaller ones. In fact,
+                about half of the planets detected with the use of the RV method are over 400 Earth masses in size,
+                whereas Jupiter is 317 Earth masses. This makes sense, because the more massive an orbiting planet, the
+                more gravitational tug it will have on its parent star, causing more of a wobble and a greater chance of
+                detection by the RV method. In this case, transit is actually better, where the majority of planets
+                discovered with the method were verified as 0-200 Earth masses, so less massive. In this way, transit
+                has less of a bias (<i>figure 10</i>). It is also interesting to note that imaging can almost exclusively
+                detect very massive planets, since they need to be very large to be directly photographed! In the case
+                of microlensing however, we see that it is remarkably successful at detecting even low mass exoplanets.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src='radius_method.jpg'/>
+            <figcaption>
+                Figure 10: Breakdown of exoplanets detected per radius category with each method
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                In the case of radius categories, we see only the transit method present. Again, this is because only
+                the transit method has the capability to measure the radius of the planet (inferred from the amount the
+                light of a star dips, caused by the larger surface area of a planet). All other methods work with mass,
+                and therefore are not present on the graph, except for imaging that can infer size from the real life
+                image taken for some very large exoplanets with 4+ Earth radii. Also again, it is noticeable that the
+                transit method is successful in detecting a lot of small planets (0-2 Earth radii), as well as large planets.
+                This, also seen in the mass visual, implies that the transit method is more successful at detecting a
+                wider range of planets as opposed to RV. This also explains why there could have been some bias with the
+                <i>Hot Jupiter</i> group that was detected excessively with the use of RV detection, and also why the planets
+                in the general expected trend had mostly unknown masses, since they were mostly detected with the use of the
+                transit method.
+            </p>
+            <p>
+                So perhaps the <i>Hot Jupiter</i> scatters were not the most reliable. That being said, they still had a lot
+                of truth in them, but maybe there are more reliable ways to look for the kinds of exoplanets that are the most
+                common. In a histogram of the most common exoplanet masses and densities (<i>figure 11</i>), we actually see
+                that relatively low mass exoplanets between 0-20 Earth masses are the most common types in the universe,
+                showing that gas giants like Jupiter are actually pretty rare. Contrasting this however, we can also see
+                that planets with a low density of generally less than 2g/cm&sup3; are the most common, with only a little
+                bump for rocky planets near Earth density. This is very strange, since it suggests that rocky planets are just
+                as rare as gas giants, and that either <i>super-Earth</i> size watery worlds (the density of water is
+                1g/cm&sup3;), or <i>mini-Neptune</i> sized gas or ice planets are the most common. <i>Super Earth</i>
+                means Earth-like but larger, and <i>mini-Neptune</i> means Neptune-like but smaller.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src='mass_density_breakdown.jpg'/>
+            <figcaption>Figure 11: Amount of exoplanet per mass and density category</figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                So in conclusion, data science can reveal a whole lot of information about planets and their characteristics,
+                and can open up completely new doors towards getting to know more about our universe. As we saw, many of
+                the characteristics that can be seen in our solar system are also true in most others, underpinned by
+                physical laws. In other times, our solar system does not reflect the norm and does not show us the most
+                common types of planets, such as with <i>Hot Jupiters</i>, <i>Super Earths</i>, and <i>Mini Neptunes</i>,
+                groups of exoplanets that are not present in our solar system. Exoplanets can also visually show physical
+                laws that have been around for centuries, and tell us correlations from which we can decode whole new ideas
+                and behaviours for what a planet really is, and how it forms. The methods we use to detect these wonders
+                are still not perfect, but we can see the bias and the direction which is necessary to mitigate this bias.
+                As we head into the future, this part of science will become crucial in our humanity’s quest for habitable
+                worlds, and for life as we know it.
+            </p>
+        </div>
+        <div id="footer">
+            <p>Written by Botond Horvath</p>
+        </div>
+    </body>
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var nav = document.getElementById("navId");
+        var sticky = nav.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            nav.classList.add("sticky");
+          } else {
+            nav.classList.remove("sticky");
+          }
+        }
+    </script>
+</html>

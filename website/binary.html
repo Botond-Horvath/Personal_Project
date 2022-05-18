@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Exoplanet.org</title>
+        <link rel="icon" href="icon.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            body {
+                background-color:white;
+                margin:0;
+                font-family:'Verdana', sans-serif;
+            }
+
+            .text {
+                margin:40px;
+                text-align:center;
+            }
+
+            h3.subtitle {
+                color:white;
+                background-color:rgb(3, 3, 199);
+                font-family:'Trebuchet MS';
+                font-weight:bold;
+                text-align:center;
+                margin:0;
+                padding:10px;
+                position:fixed;
+                top:0;
+                width:100%;
+            }
+
+            img.equasion {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                width:15%;
+                transition:0.4s
+            }
+
+            img.equasion:hover {
+                cursor:pointer;
+                width:20%;
+                border:2px 2px 1px grey;
+                box-shadow:2px 3px 2px black;
+            }
+
+            figure.figure {
+                margin:0;
+                width:100%;
+            }
+
+            figure > img {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                width:30%;
+                box-shadow:none;
+                transition:0.6s;
+            }
+
+            figure > img:hover {
+                box-shadow:2px 2px 2px grey;
+                cursor:pointer;
+            }
+
+            figure > figcaption {
+                padding:10px;
+                text-align:center;
+            }
+
+            p > a {
+                color:rgb(46, 91, 216);
+                font-weight:bold;
+                text-decoration:none;
+                transition:0.2s ease-in;
+            }
+
+            p > a:hover {
+                background-color:beige;
+                cursor:pointer;
+            }
+
+            div.back {
+                text-align:center;
+                margin:30px;
+            }
+
+            a.back {
+                padding:10px;
+                text-decoration:none;
+                background-color:cyan;
+                color:black;
+                width:100%;
+                transition:0.3s;
+            }
+
+            a.back:hover {
+                cursor:pointer;
+                background-color:black;
+                color:white;
+            }
+
+            div#footer {
+                background-image:url(title.jpg);
+                background-size:1450px 700px;
+                color:white;
+                margin:0;
+                padding:0;
+                min-width:100%;
+                float:left;
+            }
+
+            div#footer > p {
+                text-align:center;
+                margin:30px;
+            }
+
+            @media only screen and (max-width: 700px) {
+                img.equasion {
+                    width:50%;
+                }
+                img.equasion:hover {
+                    width:60%;
+                }
+                figure > img {
+                    width:100%;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <h3 class=subtitle>
+            Binary Stars: A Hope for Mass!
+        </h3>
+        <div class="text">
+            <p style="margin-top:60px;">
+                So, we have come to face the terrible truth that calculating the mass
+                of a star sitting alone in the vacuum of space is physically impossible.
+                However, there is hope. We know that mass can be derived from observing
+                the effect of gravity between two objects. There are laws in fact,
+                starting from Kepler all the way to Newton that explain the rules by
+                which celestial bodies, like planets or stars behave when they are under
+                each other's influence. Now, not all stars are like 51 Pegasi or our
+                Sun, meaning that they are alone. There are many stars, in fact about
+                half of all known stars, that have a companion, in a distance from them
+                where they are under each other’s gravitational effect so much so that
+                they orbit each other. These stars are called <b>Binary Stars</b>.
+                They can be observed visually by a telescope, if the binary star is
+                close enough to Earth (like the Alpha Centauri system), or if the two
+                stars are far enough from each other. Binary stars that are visible
+                therefore are called <b>visual binaries</b>. However, for most binaries,
+                this is not the case, and the binary star looks as though it was one
+                star, since the components are too far away, and the two stars are appear
+                too close for any human or instrument to be able to visibly see or image
+                the two, three, or sometimes even four stars in a stellar system. For
+                these situations however, astronomers can use the same methods that they
+                use to detect exoplanets: the radial velocity, and transit methods!
+            </p>
+            <p>
+                For our purposes, we are very interested in getting to know the masses
+                of the stars, and therefore we are interested in the radial velocity
+                method (more information in the <a href="observations.html">methods
+                section</a>). Binary stars that were discovered or can be observed
+                with the use of this method are known as <b>spectroscopic binaries</b>.
+                To make collecting data simpler, binary stars are usually similar in
+                mass to each other (unlike a star and an exoplanet), and therefore it
+                is not a tiny wobble in the parent star that is being detected, like
+                with exoplanets, but instead the system of two stars (usually similar
+                in mass) orbiting each other. This means that it is common for
+                astronomers to come across so-called <b>double lined</b> spectroscopic
+                binaries, where when the spectrum of the “star” is taken, there seems
+                to be two absorption lines for each absorption line. This indicates that
+                there are two stars present, each of which is giving off its own version
+                of the absorption lines, and each of which is doppler shifted in opposite
+                directions, so that the pair of lines would be visible on the same
+                spectrum (at different wavelengths). Below is a visual representation of
+                this effect on the spectrum (<i>figure 7</i>). If the absorption lines
+                of two stars with equal radial velocities were to be observed, then the
+                two lines would not be visible, since the doppler (red or blue) shift of
+                the two stars would be equal.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="double_line.jpg"/>
+            <figcaption>
+                Figure 7: Comparison of a single (top) and double (bottom) lined
+                spectrum for <i>&kappa; Arietis</i>
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                Kappa Arietis is the name of the double lined spectroscopic binary
+                whose spectrum is displayed on <i>figure 7</i>. It might be difficult
+                to see on the outer emission spectra, but the inner absorption spectra
+                show clearly that the top spectrum was taken at a time when the two
+                stars were of equal radial velocity, probably when neither of them had
+                any radial velocity from our vantage point, meaning that they were
+                aligned from our line of site, while the bottom shows clearly that each
+                absorption line is doubled. This measurement on the other hand was
+                probably taken at a time when the radial velocities of the two components
+                in this star system were heading in opposite directions, meaning that
+                one of them was redshifted and the other blueshifted from our perspective,
+                causing the spectra of the two components to separate.
+            </p>
+            <p>
+                In this way, astronomers pick out one very prominent absorption line
+                (usually Hydrogen alpha), and then looking at a lot of spectra
+                measurements taken at different times, calculate the radial velocity
+                of both components of that line, at those different times. As already
+                mentioned, the radial velocity can be calculated from wavelength by the
+                following equation:
+            </p>
+            <img class="equasion" src="rVelocityCalc.jpg"/>
+            <p>
+                Where <i>v</i> is the radial velocity, <i>c</i> is the speed of light in
+                a vacuum, while the greek letter <i>lambda</i> denotes the wavelength
+                of the spectral line. <i>Delta lambda</i> is the change between the
+                wavelengths of the measured spectral line, and the same spectral line
+                measured in a laboratory (calculating the doppler shift), while
+                <i>&lambda;<sub>0</sub></i> denotes the laboratory wavelength also.
+            </p>
+            <p>
+                So in this way, radial velocity measurements are taken for one
+                absorption line over many different measurements taken at different
+                phases of the orbit. Such raw data then, as the next step of the
+                observations, can be graphed. For our example, let's take the binary
+                star <i>Beta Orionis B</i>. Beta Orionis is the official name for
+                <b>Rigel</b>, a star found on the bottom right of the Orion
+                constellation, seen in the northern night sky in the winter months
+                (<i>figure 8</i>). Rigel in fact is itself a quadruple star system,
+                meaning that it is made up of components Rigel A, Ba, Bb, and C. As
+                seen, Rigel Ba and Bb form a binary system, while this binary star Rigel
+                B itself forms a binary with Rigel C, both of which also form a binary
+                with Rigel A. So this is a very exciting system, in which Rigel A is a
+                blue supergiant, while the other components are B type main sequence
+                stars (so very hot)!
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="orion.jpg"/>
+            <figcaption>
+                Figure 8: Constellation of Orion (<i>image from Britannica</i>)
+            </figcaption>
+        </figure>
+        <div class="text">s
+            <p>
+                Rigel A and BC form a visual binary, separated by an orbital period
+                of tens of thousands of years! That being said, B and C are still
+                separated by a huge distance, with an orbital period of 63 years, and
+                also form a visual binary. So really Ba and Bb, the two components of
+                Rigel B are the only components discovered as a binary
+                spectroscopically. They form a double lined spectroscopic binary.
+                Wanting to see what would happen if the radial velocity raw data for
+                this binary system were graphed against time, raw data was taken
+                from a 1942 article by <i>Roscoe Sanford</i> on the system, and then
+                graphed against time using Python Matplotlib techniques
+                (<i>figure 9</i>).
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="rigelRV1.jpg"/>
+            <figcaption>
+                Figure 9: Radial velocity vs. time graph for Rigel Ba and Bb
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                As seen (<i>figure 9</i>), when the double lined spectrum phenomenon
+                is presented graphically, the results are striking. The radial velocity
+                curve now has two components, both of which are sinusoidal, but appear
+                to be reflected on a horizontal axis. This horizontal axis is not at 0,
+                representing that the two star components together already had a radial
+                velocity, along with all of Rigel, through the galaxy. This value is
+                constant. However, as seen, component A and B of the system can be
+                distinguished, and since they orbit each other, when one of them is
+                moving away from our vantage point, the other is moving towards us, and
+                vice versa.
+            </p>
+            <p>
+                So the first step is completed. We have established that Rigel B forms a
+                spectroscopic binary, and have cleaned the data in graphical form. From
+                this, a lot of information can be determined that can help towards
+                deriving the masses of the components. All of this information is
+                derived from the graph. The axis on which the two sine curves meet is
+                the shared radial velocity of the whole system through the galaxy (needs
+                to be taken as the zero value), the period is the time that it takes for
+                one wave cycle to be completed, and the velocities are the semi
+                amplitudes of the two waves. Here is the data, all taken directly from
+                the above graph:
+            </p>
+            <img class="equasion" src="mass1.jpg"/>
+            <p>
+                In other words, the center of mass of Rigel B is moving towards us at
+                <i>19.1 km/s</i>, Rigel Ba and Bb take <i>9.86 days</i> to complete one
+                orbit around each other, and in this orbit, the velocity of the larger
+                component Ba is <i>25.0 km/s</i>, while for the smaller component it’s
+                <i>32.6 km/s</i>. The fact that the larger component has a smaller
+                velocity makes sense, since its orbit would be smaller, due to less
+                displacement in the orbit as opposed to the less massive component.
+                Also, it makes sense that we take the semi amplitudes (maximum radial
+                velocities) of the components as their true velocity in orbit, since
+                this maximum radial velocity is achieved when the components are moving
+                exactly away or towards us in their orbit (at the halfway point). This
+                would mean that their tangential velocity would be equal to their radial
+                velocity, and therefore their true velocity in an ideal orbit (<i>figure
+                10</i>).
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="orbitParameters.jpg"/>
+            <figcaption>
+                Figure 10: Deriving the velocity of both stars (<i>my drawing</i>)
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                These values are also underpinned by the graphs acquired from the
+                <i>9th Catalogue for Spectroscopic Binary Orbits</i> (<i>figure 11</i>).
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="rigelData.jpg"/>
+            <figcaption>
+                Figure 11: Official radial velocity graph for Rigel B
+                (<i>from database source</i>).
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                These values, that have now all been observationally measured, can be
+                used as the basis of derivations for the mass. This in reality is all
+                that needs to be known observationally, the rest can be calculated using
+                physical laws. First however, it is important to be visually able to
+                understand the important parameters of a binary star orbit, like that of
+                Rigel B visually (<i>figure 12</i>).
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="binaryOrbit.jpg"/>
+            <figcaption>
+                Figure 12: Parameters in a binary orbit (<i>my drawing</i>)
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                First of all, it is evident that the velocity of Ba in <i>km/day</i> for
+                example would be equal to the circumference of the orbit (distance in
+                <i>km</i>) over the period of the orbit (in <i>days</i>). This can be
+                rearranged to solve for the radius of the orbit for both stars (distance
+                from the center of mass). Adding these two values will yield the total
+                distance between the stars:
+            </p>
+            <img class="equasion" src="mass2.jpg"/>
+            <p>
+                The same calculation can be applied to the less massive component,
+                however, knowing that the ratio of the velocities is equal to the ratio
+                of the distances and also the masses, we can apply that:
+            </p>
+            <img class="equasion" src="mass3.jpg"/>
+            <p>Knowing this, the total separation of the two stars can be calculated:</p>
+            <img class="equasion" src="mass4.jpg"/>
+            <p>
+                So now we know that the total distance between the components Ba and Bb
+                of Rigel B is about <b>0.0533 astronomical units</b> (one AU is the
+                distance from the Earth to the Sun). So they are very close to each
+                other, and no wonder they could be only observed spectroscopically.
+            </p>
+            <p>
+                Now we are really close to calculating the masses of these two
+                components, knowing their separation and period. In fact, we know that
+                the semi-major axis, or separation, is directly related to the period of
+                any orbit from Kepler’s 3rd law:
+            </p>
+            <img class="equasion" src="mass5.jpg"/>
+            <p>
+                Or in other words, the period of the orbit squared is proportional to the
+                semi major axis, or radius of the orbit on the third power. Newton was
+                able to apply his laws, in particular the laws of gravitation and
+                centrifugal force, to come up with his own version of this law, that can
+                be applied to a binary star orbit, since it also involves the mass
+                parameter of both stars. First of all, Newton’s universal law of
+                gravitation calculated the force of gravity (in <i>Newtons</i>) between
+                two celestial objects, or in our case the two binary stars of Rigel B (Ba
+                and Bb). According to Newton, we can model this gravitational force as:
+            </p>
+            <img class="equasion" src="mass6.jpg"/>
+            <p>
+                Untangling the law only a bit allows us to understand the fundamental
+                way that gravitation behaves. We can see first of all that the force of
+                gravity decreases by a constant value while the distance increases by a
+                factor. This means that if the two binary stars were twice as far from
+                each other, then the gravitational force between them would be 2x2 or 4
+                times less. This is why we divide by the radius of the orbit squared.
+                Furthermore, the force of gravity depends on the masses of the two
+                stars, as seen, or to be exact, the product of their masses. So the
+                more massive any one of the stars becomes, the more gravitational force
+                will be present. G represents the gravitational constant, and this is
+                meant to act, like all constants, as a conversion factor between the
+                calculated force (<i>kg/m<sup>2</sup></i>) into newtons
+                ((kg*m)/s<sup>2</sup>). This constant was derived theoretically by
+                Newton, but also calculated experimentally much later by Cavendish.
+            </p>
+            <p>
+                The second aspect that we need to model is the centrifugal force of the
+                orbit for one of the stars. We can choose component Ba for this. We know
+                that since the gravitational force between the two stars Ba and Bb is
+                constant, or the same for both, the centrifugal force also needs to be
+                equal for both stars. This is due to the fact that the centrifugal
+                (outward force due to the rotation) and centripetal (gravitational)
+                forces in an orbit need to be equal, so that the orbiting stars do not
+                escape from the orbit (if the centrifugal force was stronger), and also
+                do not collide (if the gravitational force were to be stronger). So, the
+                centrifugal force of the orbit, calculated with Ba, can be modelled as
+                follows:
+            </p>
+            <img class="equasion" src="mass7.jpg"/>
+            <p>
+                This makes sense again, since we can understand that the centrifugal
+                force therefore in Newtons depends on three parameters. The mass, the
+                velocity, and the orbital radius. As seen, the greater the mass, the
+                greater this force will be. Similarly, the greater the orbital radius,
+                the less the force will be. The velocity is related to the centrifugal
+                force squared, meaning that if the star were twice as fast in its orbit,
+                the centrifugal force would act on it <i>2x2=4</i> times as strong.
+            </p>
+            <p>
+                Note that we know all of these parameters that are required for these
+                equations, except for the mass. Like so, Newton was able to isolate the
+                mass parameter, which will be useful to us, by knowing that the force of
+                gravity is equal to the centrifugal force:
+            </p>
+            <img class="equasion" src="mass8.jpg"/>
+            <p>
+                Now the problem arises that we have two different orbital radii. One of
+                them, <i>r<sub>1</sub></i> denotes the orbital radius of Ba, while
+                <i>r</i> denotes the separation of the two stars. However, we can
+                substitute our the <i>r<sub>1</sub></i>> parameter applying the basic
+                relationships of the orbital parameters of this binary star, or any
+                other orbit:
+            </p>
+            <img class="equasion" src="mass9.jpg"/>
+            <p>
+                This makes sense because the smaller the orbital radius of the star, the
+                larger its mass has to be to conserve the same centrifugal force, based
+                on what was discussed. Continuing:
+            </p>
+            <img class="equasion" src="mass10.jpg"/>
+            <p>
+                So we can replace the orbital radius of Ba with this new rearrangement,
+                that only contains that total separation (<i>r</i>):
+            </p>
+            <img style="width:20%" class="equasion" src="mass11.jpg"/>
+            <p>
+                So now Newton was able to rearrange his findings as we have done above,
+                to come up with this new formula that stems from Kepler's 3rd law, where
+                he noted that the orbital radius and the period are proportional, and
+                takes it further by finding the exact law. As seen, this new law or
+                version of Kepler’s law involves the total mass of the star system also,
+                and this is very important for our purposes, since we can rearrange it as:
+            </p>
+            <img class="equasion" src="mass12.jpg"/>
+            <p>
+                Since we know all of the parameters: the semi-major axis or total
+                separation of the two stars, as well as the period of the orbit, we are
+                set to calculate the total masses of the two stars. Using the above
+                equation involves the standard SI units, so seconds for the period,
+                meters for the separation, and therefore will yield the total mass in
+                kilograms. However, taking out all of the constants yields an equation
+                that can be used with relative units, and therefore calculate the mass
+                in solar masses, and use the period in years (relative to Earth) and the
+                separation in AU (also relative to Earth):
+            </p>
+            <img class="equasion" src="mass13.jpg"/>
+            <p>
+                Knowing that the separation of Rigel Ba and Bb is <i>0.0522AU</i> or about
+                <i>7.81x10<sup>9</sup>m</i>, and that the period is <i>9.86</i> days
+                which is equivalent to 0.027 years or 851,904 seconds, we can use both
+                formulas to solve for the total mass of the system:
+            </p>
+            <img class="equasion" src="mass14.jpg"/>
+            <p>
+                Using the other equation with the SI units:
+            </p>
+            <img class="equasion" src="mass15.jpg"/>
+            <p>
+                As seen, in both instances, we get the result that the total mass of the
+                binary star Rigel B, or the mass of components Ba and Bb added is about
+                one fifth of the mass of the Sun (<b>0.2M&#9737;</b>).
+            </p>
+            <p>
+                Now wait a second! This seems extremely irrelevant based on what we know
+                about stars. How can two B class super hot blue main sequence stars
+                together be only one fifth the mass of the Sun itself, which is a G class
+                moderate yellow star? If we were to take the individual masses of the
+                two components, they would be even smaller. Knowing that the ratio of
+                the masses is equal to the ratio of the distances:
+            </p>
+            <img class="equasion" src="mass16.jpg"/>
+            <p>
+                So as seen even clearer, we are getting results that suggest that two
+                B-type main sequence stars, that are many times more luminous and hotter
+                and even larger than the Sun as suggested by the HR diagram have masses
+                that are around 1/10 that of the Sun, which is only an average G-type
+                star! This seems totally wrong. However, there is one aspect that was
+                not taken into account during this calculation process. That is called
+                the <b><i>sin(i)</i> degeneracy</b>, which means that the masses that
+                are calculated from an orbit can only be considered the <b>minimum
+                masses</b> of those stars. The <b>true mass</b> will only equal or be
+                close to the minimum mass if the inclination of the orbit of the binary
+                system relative to Earth is close to 90 degrees, meaning that it is
+                parallel to the line of sight, and perpendicular to the plane of the sky.
+                The more the orbit is inclined, radial velocity measurements will
+                become smaller and smaller, skewing the results for mass, and only
+                providing a minimal mass (<i>figure 13</i>).
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="inclination.jpg"/>
+            <figcaption>
+                Figure 13: Diagram representing orbital inclination (<i>my drawing</i>).
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                So as can be seen, the radial velocity as perceived by observers here on
+                Earth can be greatly altered by the orbital inclination of an orbit.
+                What we can theorize with regards to Rigel B is that the inclination of
+                its orbit must be very high, since the radial velocity measurements also
+                must be much lower than their real value due to the fact that the
+                masses are much lower than their probable estimated value.
+            </p>
+            <p>
+                So in fact, yet again another obstacle. Theoretically, if the inclination
+                angle could be measured, the true masses of the stars could be
+                calculated, since the general relation is that:
+            </p>
+            <img class="equasion" src="sine.jpg"/>
+            <p>
+                However, there is no way in current knowledge to be able to calculate
+                the inclination angle of an orbit. If there was a way to estimate true
+                mass, from a parameter like luminosity for example, based on the
+                estimated true mass and the measured minimum mass, the inclination angle
+                could also be estimated. However, a relation to estimate the true mass
+                cannot be found until the true masses of at least a dataset worth of
+                stars can be calculated precisely, so that their masses could be compared
+                to look for a relation. So astronomers seemed to be stuck by this
+                degeneracy for a long time. However, theoretical derivations brought
+                hope.
+            </p>
+            <p>
+                Also, a possible solution was to look for binary stars that have not only
+                been detected spectroscopically, but also through the transit method,
+                since we know that the inclination of an orbit where a binary star was
+                observed to transit in front of its companion would have to be very
+                close to 90 degrees. Otherwise, the transit would not be observed.
+                I found the perfect star for this, so called AB Andromedae, in the
+                constellation Andromeda. It was first observed with the transit method
+                (<i>figure 14</i>), which provides the first clue that its orbital
+                inclination would have to be in a reliable enough range that any mass we
+                would calculate through the radial velocity method would also be reliable.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="andromedaTransit.jpg"/>
+            <figcaption>
+                Figure 14: Light Curves for AB Andromedae (<i>Parimucha et al.</i>)
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                After this, I was able to find radial velocity data on this same star
+                also through the <i>9th Catalogue of Spectroscopic Binary Orbits</i>.
+                Graphing the raw data of 70 entries for the double lined radial velocity
+                data using Matplotlib, just like with the Rigel B binary, I was able to
+                visually represent the orbit (<i>figure 15</i>).
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="andromedaRV.jpg"/>
+            <figcaption>
+                Figure 15: Radial velocity data for low orbital inclination binary
+                star AB Andromedae (<i>Pych et al.</i>)
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                Unfortunately, my graph is very messy, especially towards phase 1.0,
+                and that is due to the difficulties in interpreting the Julian dates as
+                time. However, conveniently, a similar graph was included with the
+                catalogue (<i>figure 16</i>).
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="andromedaCatalogue.jpg"/>
+            <figcaption>
+                Figure 16: RV curves for AB Andromedae (<i>SB9 Catalogue</i>)
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                It is interesting to see on both graphs that no data points were
+                measured close to the base RV axis, or dashed lines of the system. This
+                is probably due to the fact that data points could only be collected
+                once the spectral lines of the double lined spectroscopic binary
+                separated. Where there are no points on the spectrum, the lines were
+                merged due to the low RV shift.
+            </p>
+            <p>
+                So, just like with Rigel B, again, we can infer all of the parameters
+                needed and then use the extension of Kepler’s law to calculate their mass:
+            </p>
+            <img class="equasion" src="mass17.jpg"/>
+            <p>
+                Knowing both the period and the semi major axis, the total mass, and
+                therefore the individual masses of A Andromedae and B Andromedae can be
+                calculated:
+            </p>
+            <img class="equasion" src="mass18.jpg"/>
+            <p>
+                Finally, from the ratio of the two masses and the total mass, the mass of
+                each component is derived:
+            </p>
+            <img class="equasion" src="mass19.jpg"/>
+            <p>
+                Now these numbers seem much more reliable, and since from other
+                analysis, like the one we did with 51 Pegasi in previous sections, we
+                know that the components of this binary star are G-type and very close
+                in temperature to the Sun. The extremely short distance and period seems
+                to suggest that this binary star might even be a <b>contact binary</b>,
+                meaning that the two components actually touch each other (this star is
+                listed as a contact binary in catalogs). Regardless of this however, the
+                numbers are reliable, and this is evidently due to the fact that the
+                orbital inclination must be very low to permit transit observations also
+                to be made with this star.
+            </p>
+            <p>
+                So finally, more or less reliable measurements can be made on the masses
+                of some binary stars with low orbital inclinations. For these stars, we
+                can also make the same observations based on their temperature,
+                luminosity, spectral type, radius, and many others previously discussed.
+                The only hope for ever finding a way to measure the masses of single
+                stars is to find, therefore, some sort of relationship between the mass
+                and another parameter of a star. Starting with the luminosity, I graphed
+                the masses vs. the luminosities of 10,000 different binary stars where
+                there was data for these parameters (<i>figure 17</i>). The results
+                finally provide the answer to how we can estimate the mass of 51 Pegasi.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="mass_lum.jpg"/>
+            <figcaption>
+                Figure 17: Mass - Luminosity relation graphed for main sequence stars.
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                As seen, through an experimental approach, astronomers finally found
+                that the luminosity and mass of all stars that are the main sequence (for
+                giants it is more complicated) is closely related. In fact, as seen from
+                the logarithmic scales on the graph, the relation can be written as
+                follows:
+            </p>
+            <img class="equasion" src="mass_lum1.jpg"/>
+            <p>
+                However, astronomers from more reliable studies have found that the
+                relationship is more reliable as:
+            </p>
+            <img class="equasion" src="mass_lum2.jpg"/>
+            <p>
+                This is revolutionary, since there is finally a way for the mass of any
+                single star to be estimated from a well known parameter, such as
+                luminosity. Also, this provides a way to estimate the true mass of any
+                binary system, which after measuring the minimum mass allows the
+                calculation of the inclination angle for the orbit. This has been done
+                for many stars now, and there are catalogues that now exist for orbital
+                inclinations of many binaries also.
+            </p>
+            <p>
+                For the sake of 51 Pegasi, applying the relation yields a mass estimate
+                of about <b>1.1 solar masses</b>!
+            </p>
+            <img class="equasion" src="pegasiMass.jpg"/>
+        </div>
+        <div class="back">
+            <a class="back" href="stars.html">Back to Parameters Page</a>
+        </div>
+        <div id="footer">
+            <p>
+                Written by Botond Horvath
+            </p>
+        </div>
+    </body>
+</html>

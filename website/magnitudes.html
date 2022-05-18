@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Exoplanet.org</title>
+        <link rel="icon" href="icon.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            body {
+                background-color:white;
+                margin:0;
+                font-family:'Verdana', sans-serif;
+            }
+
+            .text {
+                margin:40px;
+                text-align:center;
+            }
+
+            h3.subtitle {
+                color:white;
+                background-color:rgb(3, 3, 199);
+                font-family:'Trebuchet MS';
+                font-weight:bold;
+                text-align:center;
+                margin:0;
+                padding:10px;
+                position:fixed;
+                top:0;
+                width:100%;
+            }
+
+            img.equasion {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                width:20%;
+                transition:0.4s
+            }
+
+            img.equasion:hover {
+                cursor:pointer;
+                width:30%;
+                border:2px 2px 1px grey;
+                box-shadow:2px 3px 2px black;
+            }
+
+            figure.figure {
+                margin:0;
+                width:100%;
+            }
+
+            figure > img {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                width:30%;
+                box-shadow:none;
+                transition:0.6s;
+            }
+
+            figure > img:hover {
+                box-shadow:2px 2px 2px grey;
+                cursor:pointer;
+            }
+
+            figure > figcaption {
+                padding:10px;
+                text-align:center;
+            }
+
+            p > a {
+                color:rgb(46, 91, 216);
+                font-weight:bold;
+                text-decoration:none;
+                transition:0.2s ease-in;
+            }
+
+            p > a:hover {
+                background-color:beige;
+                cursor:pointer;
+            }
+
+            div.back {
+                text-align:center;
+                margin:30px;
+            }
+
+            a.back {
+                padding:10px;
+                text-decoration:none;
+                background-color:cyan;
+                color:black;
+                width:100%;
+                transition:0.3s;
+            }
+
+            a.back:hover {
+                cursor:pointer;
+                background-color:black;
+                color:white;
+            }
+
+            div#footer {
+                background-image:url(title.jpg);
+                background-size:1450px 700px;
+                color:white;
+                margin:0;
+                padding:0;
+                min-width:100%;
+                float:left;
+            }
+
+            div#footer > p {
+                text-align:center;
+                margin:30px;
+            }
+
+            @media only screen and (max-width: 620px) {
+                img.equasion {
+                    width:50%;
+                }
+                img.equasion:hover {
+                    width:60%;
+                }
+                figure > img {
+                    width:100%;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <h3 class=subtitle>
+            Magnitudes
+        </h3>
+        <div class="text">
+            <p style="margin-top:60px;">
+                <b>Apparent Magnitude</b>
+            </p>
+            <p>
+                The apparent magnitude, after the parallax angle, is the second
+                parameter that needs to actually be measured for stars. It is a measure
+                of the brightness of the star, or the magnitude of the star, as
+                perceived from Earth. Telescope instruments can measure this, often in
+                the form of <b>flux</b> (<i>watts/&#13217;</i>). This then can be
+                converted to the magnitude scale, and denoted as apparent magnitude.
+            </p>
+            <p>
+                The magnitude scale is a scale of star brightness that was first
+                developed by the ancient Greeks, where 1 was defined as a category for
+                the brightest stars, and 6 as the category for the dimmest ones. So,
+                the way that the magnitude scale works is that the higher the number,
+                the dimmer the star. The Greeks used Sirius, the brightest star in the
+                night sky as the default value, with magnitude 1. Since then, the scale
+                has been expanded to include even brighter objects as negative values
+                (Sirius at -1.46), and dim objects way past 6 (Hubble deep space images
+                down to +30 magnitude). A jump of one magnitude value corresponds to a
+                change in brightness (or flux) by a factor of about 2.512, or the 5th
+                root of 100. A magnitude 2 star therefore is approximately 16x brighter
+                than a magnitude 5 star:
+            </p>
+            <img class="equasion" src="mApparent.jpg"/>
+            <p>
+                So understanding this, after a telescope instrument measured the flux
+                of 51 Pegasi, that flux was compared to the flux of a star whose
+                brightness was already known, such as Vega yielding the relative
+                brightness to that star, and then from there the relative magnitude to
+                that star could also be calculated in the above way but reversed (for
+                the case of Vega, the magnitude is 0 so the calculation is fairly
+                simple). In this way, the apparent magnitude of 51 Pegasi was found to
+                be <b>5.49</b> through a visible filter. This means that it is about 150x
+                dimmer than the star Vega, and 600x dimmer than Sirius, the brightest
+                star. In perfect conditions, it is just barely visible, since the limit
+                for a perfect human eye in perfect conditions tends to be 6th magnitude.
+            </p>
+            <p>
+                Notice that this parameter is not called magnitude, but apparent
+                magnitude. This is due to the fact that this measured magnitude is not
+                the real magnitude or brightness of the star (also known absolute
+                magnitude), but rather just the magnitude as perceived from the observer,
+                here on Earth. This means that if we have two stars, star A could be
+                1000x more luminous in absolute magnitude than star B, but star B’s
+                apparent magnitude could still be greater, if it is closer. Therefore,
+                for the sake of further calculations, the absolute magnitude is of more
+                value.
+            </p>
+            <p>
+                The absolute magnitude is defined as the apparent magnitude of a star as
+                it would seem observed from a distance of 10 parsecs. Therefore, knowing
+                the distance and the apparent magnitude now, we can calculate that, and
+                from there, the relative luminosity.
+            </p>
+            <p><b>Absolute Magnitude</b></p>
+            <p>
+                We now know two things about 51 Pegasi. That its distance is
+                15.4 parsecs, and that its apparent magnitude is 5.49. To calculate the
+                absolute magnitude from this, we know that this magnitude would have to
+                be the perceived apparent magnitude from 10 parsecs. We can think of an
+                imaginary version of 51 Pegasi at a distance of 10 parsecs, the apparent
+                brightness of which would be equal to the absolute brightness. For this
+                conversion, we first need to calculate how much farther our real star is
+                from the imaginary star. We can think of this as:
+            </p>
+            <img class="equasion" src="distanceEquasion.jpg"/>
+            <p>
+                Knowing how much farther 51 Pegasi is from our imaginary star at 10
+                parsecs, we can calculate how much dimmer it appears than our imaginary
+                version at 10 parsecs, where the apparent and absolute magnitudes would
+                be equal. For this, we need to understand the basic relationship between
+                change in distance and change in brightness. Since brightness needs to
+                scatter in a spherical manner from a star, and the distance can be
+                thought of as the radius of this sphere, the surface area that the light
+                needs to fill is not the distance, but:
+            </p>
+            <img class="equasion" src="surface.jpg"/>
+            <p>
+                Therefore, the change in distance is related to the change in brightness
+                in the following way:
+            </p>
+            <img class="equasion" src="distanceChanges.jpg"/>
+            <p>
+                Therefore, due to the nature of this relation, knowing how much father
+                our star is from its imaginary version, we can find how much dimmer it
+                is than it would be by the following relation:
+            </p>
+            <img class="equasion" src="conversion1.jpg"/>
+            <p>
+                Instead of thinking of this value as how much dimmer 51 Pegasi appears
+                than its imaginary version, we can also think of this as how much
+                brighter the absolute brightness would be compared to the apparent
+                brightness, since absolute brightness (magnitude) is defined as the
+                apparent brightness at 10 parsecs, or where our imaginary star is located.
+            </p>
+            <p>
+                Now we are left with the task of converting how much brighter the
+                absolute brightness is compared to the apparent brightness, to
+                magnitudes. We know from the definition of magnitudes that the we can
+                calculate the relative brightness of a star compared to another in the
+                following way:
+            </p>
+            <img class="equasion" src="conversion2.jpg"/>
+            <p>
+                We can think of the magnitude of our imaginary star as equal to the
+                absolute magnitude, since it is located at 10 parsecs, and therefore this
+                relation can be rewritten as:
+            </p>
+            <img class="equasion" src="conversion3.jpg"/>
+            <p>
+                In other words, we have established that the 5th root of 100 (change in
+                1 level of magnitude) raised to the change in magnitudes between the
+                absolute and the apparent magnitudes is equal to the relative brightness
+                of our imaginary star at 10 parsecs to that of our actual star. It makes
+                sense to subtract the absolute magnitude from the apparent magnitude,
+                since if the star is farther than 10 parsecs (almost always), then the
+                apparent magnitude will be dimmer than the absolute magnitude. Dimmer
+                however means larger on the magnitude scale, so the relative brightness
+                will still increase.
+            </p>
+            <p>
+                The only task now that we have to face is rearranging this equation that
+                has been established so that the absolute magnitude would be isolated,
+                allowing us to solve for it knowing now the apparent magnitude and
+                distance:
+            </p>
+            <img class="equasion" src="conversion4.jpg"/>
+            <p>
+                Now that we have constructed a formula, knowing the distance and apparent
+                magnitudes, the absolute magnitude of 51 Pegasi can be calculated as about
+                <b>4.5</b>:
+            </p>
+            <img class="equasion" src="conversion5.jpg"/>
+        </div>
+        <div class="back">
+            <a class="back" href="stars.html">Back to Parameters Page</a>
+        </div>
+        <div id="footer">
+            <p>
+                Written by Botond Horvath
+            </p>
+        </div>
+    </body>
+</html>

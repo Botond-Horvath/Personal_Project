@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Exoplanet.org</title>
+        <link rel="icon" href="icon.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            body {
+                background-color:white;
+                font-family:'Verdana', sans-serif;
+                margin: 0;
+            }
+
+            header {
+                background-image:url(title.jpg);
+                background-size:1450px 700px;
+            }
+
+            h1.title {
+                text-align:center;
+                color:blue;
+                font-family: 'Gill Sans';
+                font-style: italic;
+                padding-top: 50px;
+                padding-bottom:50px;
+                font-size:80px;
+                margin:0;
+            }
+
+            ul {
+                list-style-type: none;
+                background-color:black;
+			    margin:0;
+			    width:100%;
+			    padding:0;
+                overflow:hidden;
+			    box-shadow:2px 5px 10px black;
+            }
+
+            li {
+                float:left;
+            }
+
+            li a, .dropdown_button {
+                text-align:center;
+			    color:white;
+			    padding:10px;
+			    font-family:Gill Sans;
+			    font-size:20px;
+			    text-decoration:none;
+                border:none;
+                display:inline-block;
+            }
+
+            .current {
+                background-color:rgb(3, 3, 199);
+            }
+
+            li a:hover, .dropdown_content a:hover {
+                background-color:white;
+                color:black;
+                cursor:pointer;
+                transition:0.2s ease-in;
+            }
+
+            li.dropdown {
+                display:inline-block;
+            }
+
+            .dropdown_content {
+                display:none;
+                box-shadow:3px 3px 2px black;
+                background-color:black;
+                position:absolute;
+                z-index:1;
+            }
+
+            .dropdown_content > a {
+                text-decoration:none;
+                color:white;
+                display:block;
+                padding:10px;
+                font-family:Gill Sans;
+			    font-size:20px;
+                text-align:center;
+            }
+
+            .dropdown:hover .dropdown_content {
+                display: block;
+            }
+
+            h3.subtitle {
+                color:white;
+                background-color:rgb(3, 3, 199);
+                font-family:'Trebuchet MS';
+                font-weight:bold;
+                text-align:center;
+                margin:0;
+                padding:10px;
+            }
+
+            .textbox {
+                text-align:center;
+            }
+
+            .textbox > input {
+                text-align:center;
+                width:500px;
+                height:30px;
+                font-family:'Verdana';
+            }
+
+            .button {
+                text-align:center;
+                margin:10px;
+            }
+
+            #enter {
+                background-color:blue;
+                color:white;
+                font-family:Verdana;
+                padding:10px;
+                text-align:center;
+            }
+
+            #enter:hover {
+                color:black;
+                background-color:beige;
+                transition:0.2s ease-in;
+                cursor:pointer;
+            }
+
+            .sticky {
+                position:fixed;
+                top:0;
+            }
+
+            .text {
+                margin:40px;
+            }
+
+            div.table {
+                display:flex;
+                justify-content:center;
+            }
+
+            #info {
+                width:50%;
+            }
+
+            table {
+                border:1px solid black;
+            }
+
+            td, th {
+                border:1px solid black;
+            }
+
+            .planet {
+                background-color:green;
+            }
+
+            .star {
+                background-color:yellow;
+            }
+
+            @media only screen and (max-width: 620px) {
+                h1.title {
+                    font-size: 80px;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+            <h1 class=title>Exoplanet Blog</h1>
+        </header>
+        <ul id="navId">
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="observations.html">Observational Data</a></li>
+            <li class="dropdown">
+                <a class="dropdown_button" href="#top">Parameter Calculations</a>
+                <div class="dropdown_content">
+                    <a href="stars.html">Host Star Parameters</a>
+                    <a href="parameters.html">Exoplanet Parameters</a>
+                </div>
+            </li>
+            <li><a href="data.html">Data Analysis</a></li>
+            <li><a class="current" href="catalogue.html">Catalogue</a></li>
+            <li><a href="bibliography.html">Bibliography</a></li>
+        </ul>
+        <h3 class=subtitle>
+            Exoplanet Catalogue (find any planet)
+        </h3>
+        <div class="text">
+            <p>
+                Below, please enter the name of the exoplanet that you
+                want more info on. Any exoplanet will do. Unfortunately,
+                not all exoplanets that exist are in this catalogue, but
+                you'll find most of them:
+            </p>
+        </div>
+        <div class=textbox>
+            <input id=input size="50" placeholder="Exoplanet Name">
+        </div>
+        <div class=button>
+            <button type='button' onclick=printInfo() id=enter>Show Information</button>
+        </div>
+        <div class="table">
+            <table id='info'>
+                <tr>
+                    <th colspan="2" id="name"></th>
+                </tr>
+                <tr>
+                    <th>Exoplanet Parameters</th>
+                    <th>Host Star Parameters</th>
+                </tr>
+                <tr>
+                    <td class="planet" id="1.1"></td>
+                    <td class="star" id="1.2"></td>
+                </tr>
+                <tr>
+                    <td class="planet" id="2.1"></td>
+                    <td class="star" id="2.2"></td>
+                </tr>
+                <tr>
+                    <td class="planet" id="3.1"></td>
+                    <td class="star" id="3.2"></td>
+                </tr>
+                <tr>
+                    <td class="planet" id="4.1"></td>
+                    <td class="star" id="4.2"></td>
+                </tr>
+                <tr>
+                    <td class="planet" id="5.1"></td>
+                    <td class="star" id="5.2"></td>
+                </tr>
+                <tr>
+                    <td class="planet" id="6.1"></td>
+                    <td class="star" id="6.2"></td>
+                </tr>
+                <tr>
+                    <td class="planet" id="7.1"></td>
+                    <td class="star" ></td>
+                </tr>
+                <tr>
+                    <td class="planet" id="8.1"></td>
+                    <td class="star" ></td>
+                </tr>
+                <tr>
+                    <td class="planet" id="9.1"></td>
+                    <td class="star" ></td>
+                </tr>
+                <tr>
+                    <td class="planet" id="10.1"></td>
+                    <td class="star" ></td>
+                </tr>
+            </table>
+        </div>
+        <script type='text/javascript' src="catalogue_data.js"></script>
+        <script type='text/javascript'>
+
+            data = exoplanets;
+            array = [];
+
+            for (i=0;i<data.length;i++) {
+                array.push([data[i].PlanetIdentifier,data[i].PlanetaryMassJpt,data[i].RadiusJpt,data[i].PeriodDays,data[i].SemiMajorAxisAU,data[i].Eccentricity,data[i].InclinationDeg,data[i].SurfaceTempK,data[i].AgeGyr,data[i].DiscoveryMethod,data[i].DiscoveryYear,data[i].DistFromSunParsec,data[i].HostStarMassSlrMass,data[i].HostStarRadiusSlrRad,data[i].HostStarMetallicity,data[i].HostStarTempK,data[i].HostStarAgeGyr]);
+            };
+
+            function check(parameter,unit) {
+                if (parameter == '') {
+                    parameter = 'unknown'
+                }
+                else {
+                    Math.round(parameter,2);
+                    parameter += unit;
+                }
+                return(parameter);
+            };
+
+            function display(chosenList) {
+                name = chosenList[0];
+                document.getElementById('name').innerHTML = name;
+                unit = ' jupiter masses';
+                mass = check(chosenList[1],unit);
+                document.getElementById('1.1').innerHTML = 'Mass: ' + mass;
+                unit = ' jupiter radii';
+                radius = check(chosenList[2],unit);
+                document.getElementById('2.1').innerHTML = 'Radius: ' + radius;
+                unit = ' days';
+                period = check(chosenList[3],unit);
+                document.getElementById('3.1').innerHTML = 'Period: ' + period;
+                unit = ' AU';
+                sma = check(chosenList[4],unit);
+                document.getElementById('4.1').innerHTML = 'Semi Major Axis: ' + sma;
+                unit = '';
+                ecc = check(chosenList[5],unit);
+                document.getElementById('5.1').innerHTML = 'Eccentricity: ' + ecc;
+                unit = ' degrees';
+                inc = check(chosenList[6],unit);
+                document.getElementById('6.1').innerHTML = 'Inclination: ' + inc;
+                unit = ' kelvins';
+                temp = check(chosenList[7],unit);
+                document.getElementById('7.1').innerHTML = 'Temperature: ' + temp;
+                unit = ' billion years';
+                age = check(chosenList[8],unit);
+                document.getElementById('8.1').innerHTML = 'Age: ' + age;
+                method = chosenList[9];
+                document.getElementById('9.1').innerHTML = 'Method of Discovery: ' + method;
+                year = chosenList[10];
+                document.getElementById('10.1').innerHTML = 'Year of discovery: ' + year;
+                unit = ' parsecs';
+                strDist = check(chosenList[11],unit);
+                document.getElementById('1.2').innerHTML = 'Distance from Sun: ' + strDist;
+                unit = ' solar masses';
+                strMass = check(chosenList[12],unit);
+                document.getElementById('2.2').innerHTML = 'Mass: ' + strMass;
+                unit = ' solar radii';
+                strRad =  check(chosenList[13],unit);
+                document.getElementById('3.2').innerHTML = 'Radius: ' + strRad;
+                unit = '';
+                strMet =  check(chosenList[14],unit);
+                document.getElementById('4.2').innerHTML = 'Metallicity: ' + strMet;
+                unit = ' kelvins';
+                strTemp = check(chosenList[15],unit);
+                document.getElementById('5.2').innerHTML = 'Temperature: ' + strTemp;
+                unit = ' billion years';
+                strAge = check(chosenList[16],unit);
+                document.getElementById('6.2').innerHTML = 'Age: ' + strAge;
+            };
+
+            function printInfo() {
+                input = document.getElementById('input').value.toLowerCase().replace(new RegExp(' ', 'g'), '').replace(new RegExp('-', 'g'), '');
+                chosenList = [];
+                for (i=0;i<array.length;i++) {
+                    id = array[i][0];
+                    planet = id.toLowerCase().replace(new RegExp(' ', 'g'), '').replace(new RegExp('-', 'g'), '');
+                    if (input == planet) {
+                        chosenList = array[i];
+                        display(chosenList);
+                    }
+                }
+                if (chosenList.length == 0) {
+                    alert('That exoplent name is not in the list...')
+                }
+            };
+
+
+            window.onscroll = function() {myFunction()};
+
+            var nav = document.getElementById("navId");
+            var sticky = nav.offsetTop;
+
+            function myFunction() {
+            if (window.pageYOffset > sticky) {
+                nav.classList.add("sticky");
+            } else {
+                nav.classList.remove("sticky");
+            }
+            }
+        </script>
+    </body>
+
+</html>

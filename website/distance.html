@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Exoplanet.org</title>
+        <link rel="icon" href="icon.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            body {
+                background-color:white;
+                margin:0;
+                font-family:'Verdana', sans-serif;
+            }
+
+            .text {
+                margin:40px;
+                text-align:center;
+            }
+
+            h3.subtitle {
+                color:white;
+                background-color:rgb(3, 3, 199);
+                font-family:'Trebuchet MS';
+                font-weight:bold;
+                text-align:center;
+                margin:0;
+                padding:10px;
+                position:fixed;
+                top:0;
+                width:100%;
+            }
+
+            img.equasion {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                width:15%;
+                transition:0.4s
+            }
+
+            img.equasion:hover {
+                cursor:pointer;
+                width:20%;
+                border:2px 2px 1px grey;
+                box-shadow:2px 3px 2px black;
+            }
+
+            figure.figure {
+                margin:0;
+                width:100%;
+            }
+
+            figure > img {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                width:30%;
+                box-shadow:none;
+                transition:0.6s;
+            }
+
+            figure > img:hover {
+                box-shadow:2px 2px 2px grey;
+                cursor:pointer;
+            }
+
+            figure > figcaption {
+                padding:10px;
+                text-align:center;
+            }
+
+            p > a {
+                color:rgb(46, 91, 216);
+                font-weight:bold;
+                text-decoration:none;
+                transition:0.2s ease-in;
+            }
+
+            p > a:hover {
+                background-color:beige;
+                cursor:pointer;
+            }
+
+            div.back {
+                text-align:center;
+                margin:30px;
+            }
+
+            a.back {
+                padding:10px;
+                text-decoration:none;
+                background-color:cyan;
+                color:black;
+                width:100%;
+                transition:0.3s;
+            }
+
+            a.back:hover {
+                cursor:pointer;
+                background-color:black;
+                color:white;
+            }
+
+            div#footer {
+                background-image:url(title.jpg);
+                background-size:1450px 700px;
+                color:white;
+                margin:0;
+                padding:0;
+                min-width:100%;
+                float:left;
+            }
+
+            div#footer > p {
+                text-align:center;
+                margin:30px;
+            }
+
+            @media only screen and (max-width: 700px) {
+                img.equasion {
+                    width:50%;
+                }
+                img.equasion:hover {
+                    width:60%;
+                }
+                figure > img {
+                    width:100%;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <h3 class=subtitle>
+            Distance
+        </h3>
+        <div class="text">
+            <p style="margin-top:60px;">
+                Astronomers always start with the calculations of the distance. This is
+                very important, since it will be crucial for the following calculations.
+                The unit of measurement most astronomers use is known as the
+                <b>parsec</b>. This is due to the fact that kilometers are too small of
+                a unit to use and its values would blow up. <b>Light years</b> on the
+                other hand can easily be understood by the public (since it takes light
+                in a vacuum 1 year to travel 1 light year), but the unit does not have a
+                lot of astronomical significance in terms of observations and
+                calculations. The parsec is very convenient, starting right at the
+                definition of what it is.
+            </p>
+            <p>
+                Distances to stars are measured using simple geometry (<i>figure 1</i>).
+                The main concept is that background stars are observed behind the star
+                of interest in July, and then again in January, or at any two dates
+                that are exactly on other halves of the year. This is to ensure that
+                the Earth in its orbit would be at exactly opposite sides of the Sun
+                at the two measurement dates. Then, the angle between the background
+                stars in January and the ones in July are measured (the <b>parallax</b>).
+                If half of this angle is equal to one <b>arc-second</b>, which is 1/60
+                of an <b>arc-minute</b> (1/60 of a degree), and therefore 1/3600th of a
+                degree, where the lobe of the sky is 360 degrees all around, then the
+                distance between the Sun and that star is defined as 1 parsec. Parsec
+                itself is a blend of the words parallax and second, from arcsecond.
+            </p>
+        </div>
+        <figure class="figure">
+            <img src="parallax.jpg"/>
+            <figcaption>
+                Figure 1: The definition of a parsec (<i>my drawing</i>).
+            </figcaption>
+        </figure>
+        <div class="text">
+            <p>
+                Therefore, following this definition, knowing the parallax angle of a
+                star of interest, the distance to that star in parsecs can be
+                calculated as follows:
+            </p>
+            <img class="equasion" src="distance.jpg"/>
+            <p>
+                Where the distance in parsecs is defined as the inverse of the parallax
+                angle (<i>pi</i>) in degrees.
+            </p>
+            <p>
+                Believe it or not, the parallax measurement, the brightness measurement,
+                and the spectrum of the star are really the only measurements that
+                need to be taken by instruments. All the rest of the information can
+                theoretically be implied and calculated from these three measurements.
+                Therefore, it is very important that the parallax be measured very well.
+                Instruments are limited, and there is a limit of about 1000 parsecs
+                distance, further than which it is very difficult to measure distances.
+                However, instruments are getting more sophisticated as time goes on,
+                and this threshold is continually being extended. In the grander scheme
+                of things, the limit of the parallax method is still a problem, since
+                the universe extends far beyond 1000 parsecs, with the edge of our own
+                galaxy probably being 300,000 parsecs away, and other galaxies
+                exponentially further than that. So this method is unreliable for larger
+                distances outside of our relatively speaking immediate area in the
+                universe. Outside of that, there are many other methods and theories
+                used to imply distances, called the <b>cosmic distance ladder</b>. This
+                is a very interesting area of study.
+            </p>
+            <p>
+                For our purposes however, the parallax method is perfect. The parallax
+                angle of 51 Pegasi was measured most reliably as 64.6488 milliarcseconds,
+                or 0.0646488 arcseconds. This implies a distance of about
+                <b>15.5 parsecs</b>:
+            </p>
+            <img class="equasion" src="parsec.jpg"/>
+        </div>
+        <div class="back">
+            <a class="back" href="stars.html">Back to Parameters Page</a>
+        </div>
+        <div id="footer">
+            <p>
+                Written by Botond Horvath
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Exoplanet.org</title>
+        <link rel="icon" href="icon.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            body {
+                background-color:white;
+                font-family:'Verdana', sans-serif;
+                margin: 0;
+            }
+
+            header {
+                background-image:url(title.jpg);
+                background-size:1450px 700px;
+            }
+
+            h1.title {
+                text-align:center;
+                color:blue;
+                font-family: 'Gill Sans', sans-serif;
+                font-style: italic;
+                padding-top: 50px;
+                padding-bottom:50px;
+                font-size:80px;
+                margin:0;
+            }
+
+            ul.nav {
+                list-style-type: none;
+                background-color:black;
+			    margin:0;
+			    width:100%;
+			    padding:0;
+                overflow:hidden;
+			    box-shadow:2px 5px 10px black;
+            }
+
+            ul.nav > li {
+                float:left;
+            }
+
+            ul.nav > li a, .dropdown_button {
+                text-align:center;
+			    color:white;
+			    padding:10px;
+			    font-family:Gill Sans;
+			    font-size:20px;
+			    text-decoration:none;
+                border:none;
+                display:inline-block;
+            }
+
+            .current {
+                background-color:rgb(3, 3, 199);
+            }
+
+            ul.nav > li a:hover, .dropdown_content a:hover {
+                background-color:white;
+                color:black;
+                cursor:pointer;
+                transition:0.2s ease-in;
+            }
+
+            ul.nav > li.dropdown {
+                display:inline-block;
+            }
+
+            .dropdown_content {
+                display:none;
+                box-shadow:3px 3px 2px black;
+                background-color:black;
+                position:absolute;
+                z-index:1;
+            }
+
+            .dropdown_content > a {
+                text-decoration:none;
+                color:white;
+                display:block;
+                padding:10px;
+                font-family:Gill Sans;
+			    font-size:20px;
+                text-align:center;
+            }
+
+            .dropdown:hover .dropdown_content {
+                display: block;
+            }
+
+            .sticky {
+                position:fixed;
+                top:0;
+            }
+
+            h3.subtitle {
+                color:white;
+                background-color:rgb(3, 3, 199);
+                font-family:'Trebuchet MS';
+                font-weight:bold;
+                text-align:center;
+                margin:0;
+                padding:10px;
+            }
+
+            div.text {
+                margin:40px;
+            }
+
+            img {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                width:50%;
+                box-shadow:none;
+                transition:0.6s;
+            }
+
+            img:hover {
+                box-shadow:2px 2px 5px;
+                cursor:pointer;
+            }
+
+            div.img {
+                width:100%;
+            }
+
+            div.info {
+                width:48%;
+                float:left;
+                text-align:center;
+            }
+
+            div.list {
+                display:flex;
+                justify-content:center;
+                float:right;
+                width:48%;
+                padding-right:10px;
+            }
+
+            div.child {
+                width:100%;
+            }
+
+            ul.list {
+                list-style-type:none;
+                text-align:center;
+                margin-top:20px;
+                margin-bottom:20px;
+                width:100%;
+            }
+
+            li.list > a {
+                background-color:black;
+                width:100%;
+                display:inline-block;
+                text-decoration:none;
+                color:white;
+                padding-bottom:10px;
+                padding-top:10px;
+                font-family:'Gill Sans';
+                font-style:italic;
+                transition:0.6s;
+            }
+
+            li.list > a:hover {
+                background-color:white;
+                color:black;
+                opacity:1;
+                cursor:pointer;
+            }
+
+            div.footer {
+                background-image:url(title.jpg);
+                background-size:1450px 700px;
+                color:white;
+                margin:0;
+                padding:0;
+                width:100%;
+                float:left;
+            }
+
+            p.footer {
+                text-align:center;
+                margin:30px;
+            }
+
+            @media only screen and (max-width: 700px) {
+                h1.title {
+                    font-size: 80px;
+                }
+                div.list {
+                    width:100%;
+                    float:none;
+                }
+                div.info {
+                    width:100%;
+                    float:none;
+                }
+
+                img {
+                    display:block;
+                    margin-left:auto;
+                    margin-right:auto;
+                    width:100%;
+                    box-shadow:none;
+                    transition:0.6s;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+            <h1 class=title>Exoplanet Blog</h1>
+        </header>
+        <ul class="nav" id="navId">
+            <li><a class="current" href="index.html">Introduction</a></li>
+            <li><a href="observations.html">Observational Data</a></li>
+            <li class="dropdown">
+                <a class="dropdown_button" href="#top">Parameter Calculations</a>
+                <div class="dropdown_content">
+                    <a href="stars.html">Host Star Parameters</a>
+                    <a href="parameters.html">Exoplanet Parameters</a>
+                </div>
+            </li>
+            <li><a href="data.html">Data Analysis</a></li>
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="bibliography.html">Bibliography</a></li>
+        </ul>
+        <h3 class=subtitle>
+            Introduction (About the site)
+        </h3>
+        <div class=text>
+            <h3>About this Project</h3>
+            <p>
+                My name is Botond Horvath, and I am a student in Year 10 at UCC. I completed this project, of which all of the
+                fruits are visible on this webpage, for the sake of my Personal Project, which is a requirement for IB Year 10.
+                I am greatly interested in the world of astronomy and astrophysics, and the universe in general, and this is a
+                field that I would possibly want pursue in my future.
+            </p>
+            <p>
+                <b>Exoplanets</b>, of which this project revolves around, are planets that can be found outside of the solar
+                system, or in other words are planets that revolve around stars (whatever types they may be) other than our
+                own Sun. As we know, and we have known for centuries, our own planet, and many others such as Mercury,
+                Venus, Mars, Jupiter, Saturn, Uranus, and Neptune revolve around the Sun as planets. However, after we
+                discovered that stars in the sky are just like our Sun, or in other words our Sun is a star itself, we came to
+                wonder if there could be planets revolving around some of these stars too. However, we did not have the means
+                to detect them. Regardless, astronomers like Kepler and mathematicians like Newton gave us a new understanding
+                of this vast universe, centered around strict physical laws, that as well as to the Solar System, applied well
+                beyond to the vastess of the cosmos. Once telescopes advanced, we were able to observe so called <b>binary stars,</b>
+                where two stars revolved around each other under the effect of gravity. Once instruments became even more
+                perculiar, we began to observe smaller and smaller companions in binaries, until we were actually able to
+                observe planets!
+            </p>
+            <p>
+                The first planet outside our solar system was discovered in 1995, using a method known as <b>radial velocity</b>
+                this method had previously been used to detect binary stars. The planet was deemed <b>51 Pegasi b</b>, thus
+                initiating the nomenclature for exoplanets (the name of the parent star followed by <i>b/c/d</i> for planets)
+                Another popular method used is known as the <b>transit</b> method, and looks at periodic dips in the brightness
+                of stars to detect a possible blocking planet. This method, again, evolved from a method that was previously
+                used to detect binaries.
+            </p>
+        </div>
+        <div class=img>
+            <img src='intro_img.jpg'>
+        </div>
+        <div class=text>
+            <div class=info>
+                <p>
+                    This project aims to provide an educational and practical source that can be used by all astronomy
+                    enthusiasts. It is broken down into the main sections listed here.
+                </p>
+            </div>
+            <div class=list>
+                <div class="child">
+                    <ul class=list>
+                        <li class=list><a href='observations.html'>Observation Methods and Data Collection</a></li>
+                        <li class=list><a href='parameters.html'>A look at the parents (Stars)</a></li>
+                        <li class=list><a href='stars.html'>Learning from the Data - Host Star Parameters</a></li>
+                        <li class=list><a href='parameters.html'>Learning from the Data - Exoplanet Parameters</a></li>
+                        <li class=list><a href='data.html'>Interpreting the Paramteres (A bit of Data Science)</a></li>
+                        <li class=list><a href='catalogue.html'>A Catalogue to Explore</a></li>
+                        <li class=list><a href='bibliography.html'>An Overview of my Sources</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class=footer>
+            <p class=footer>
+                <i>This project was created by Botond Horvath (UCC Student) for the IB MYP Personal Project in Year 10. The
+                    supervisor for this project was Ms. Boon.</i>
+            </p>
+        </div>
+    </body>
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var nav = document.getElementById("navId");
+        var sticky = nav.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            nav.classList.add("sticky");
+          } else {
+            nav.classList.remove("sticky");
+          }
+        }
+    </script>
+</html>
